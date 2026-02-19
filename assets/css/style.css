@@ -1,0 +1,392 @@
+/* 基本样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 主要内容样式 */
+.page-content {
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+/* 学术风格样式 */
+
+/* 个人信息头部 */
+.profile-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-info {
+    vertical-align: top;
+    padding-right: 2rem;
+    width: 70%;
+}
+
+.profile-avatar {
+    vertical-align: top;
+    text-align: center;
+    width: 30%;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.chinese-name {
+    font-size: 1.8rem;
+    color: #666;
+    font-weight: normal;
+}
+
+.badges {
+    margin-bottom: 1.5rem;
+}
+
+.badges img {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-links {
+    margin-bottom: 1.5rem;
+}
+
+.contact-links a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: scale(1.2);
+}
+
+.avatar-img {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db;
+}
+
+/* Section样式 */
+.section-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.biography p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* 机构表格样式 */
+.institution-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.institution-logo {
+    width: 120px;
+    vertical-align: top;
+    padding-right: 1rem;
+}
+
+.institution-info {
+    vertical-align: top;
+}
+
+.logo-img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.institution-info h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.institution-info h4 {
+    color: #3498db;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.institution-info p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.institution-info ul {
+    margin: 0.5rem 0 0 1.25rem;
+    padding: 0;
+}
+
+.institution-info li {
+    margin-bottom: 0.4rem;
+}
+
+/* 横向滚动图片展示 */
+.scroll-gallery-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 120px;
+}
+
+.scroll-gallery-wrapper > div {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.scroll-gallery-wrapper a {
+    flex: 0 0 auto;
+}
+
+.scroll-gallery-wrapper img {
+    height: 120px;
+    margin-right: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #eee;
+    display: block;
+}
+
+/* 奖项样式 */
+.awards-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.awards-list li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background-color: #f8f9fa;
+    border-left: 4px solid #f39c12;
+    border-radius: 3px;
+}
+
+/* 工作成果展示样式 */
+.work-achievements {
+    margin-top: 1.5rem;
+    padding: 0;
+    background-color: transparent;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.achievement-item {
+    display: flex;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+    transition: border-color 0.2s ease;
+}
+
+.achievement-item:hover {
+    border-color: #3498db;
+}
+
+.achievement-media {
+    position: relative;
+    width: 160px;
+    min-height: 100px;
+    height: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+}
+
+.achievement-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.achievement-media img,
+.achievement-media video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    display: block;
+}
+
+.achievement-media a:hover img,
+.achievement-media a:hover video {
+    opacity: 0.8;
+}
+
+.achievement-content {
+    padding: 0.8rem 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.achievement-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+
+.achievement-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.achievement-link {
+    display: inline-block;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.achievement-link:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+/* 更新时间样式 */
+.last-update {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .profile-table {
+        display: block;
+    }
+
+    .profile-info,
+    .profile-avatar {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile-avatar {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .chinese-name {
+        font-size: 1.4rem;
+    }
+
+    .avatar-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .institution-table {
+        display: block;
+    }
+
+    .institution-logo,
+    .institution-info {
+        display: block;
+        width: 100%;
+    }
+
+    .institution-logo {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .scroll-gallery-wrapper {
+        margin-left: 0;
+    }
+
+    .achievement-item {
+        flex-direction: column;
+    }
+
+    .achievement-media {
+        width: 100%;
+        height: 160px;
+    }
+
+    .achievement-content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievement-media {
+        height: 140px;
+    }
+
+    .achievement-content {
+        padding: 0.8rem;
+    }
+}
