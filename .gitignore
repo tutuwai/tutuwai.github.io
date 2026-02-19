@@ -1,0 +1,21 @@
+# 视频文件（网站用 GIF，不需要上传原视频）
+assets/videos/
+*.mp4
+
+# 内部文档与参考资料（不需上线）
+应届生转正述职-陈海崴.pdf
+docs/
+*.mov
+*.avi
+*.webm
+
+# 系统/编辑器生成
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# 临时文件
+*.tmp
+*.temp
+*.log
