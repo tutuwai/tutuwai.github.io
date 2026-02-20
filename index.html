@@ -28,9 +28,9 @@
                             </div>
 
                             <div class="status-updates">
-                                <p style="color: #3498db; margin: 0.3rem 0; font-size: 0.95rem;">📚 Preparing for graduate studies, targeting CAS Industrial AI Institute</p>
-                                <p style="color: #3498db; margin: 0.3rem 0; font-size: 0.95rem;">🎓 Former Embedded Software Engineer @ Xiaomi Home Appliances</p>
-                                <p style="color: #3498db; margin: 0.3rem 0; font-size: 0.95rem;">🚀 Actively seeking opportunities in embodied intelligence</p>
+                                <p style="color: #3498db; margin: 0.3rem 0; font-size: 0.95rem;">📚 Preparing for graduate study in embodied intelligence</p>
+                                <p style="color: #3498db; margin: 0.3rem 0; font-size: 0.95rem;">🎓 Former Embedded Software Engineer at Xiaomi Home Appliances</p>
+                                <p style="color: #3498db; margin: 0.3rem 0; font-size: 0.95rem;">🚀 Focused on practical AI systems for real-world products</p>
                             </div>
 
                             <div class="contact-links" style="display: flex; align-items: center; gap: 0.5rem;">
@@ -40,7 +40,7 @@
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                 </a>
-                                <a href="./assets/images/wechat.png" title="WeChat" target="_blank" style="display: inline-flex; align-items: center;">
+                                <a href="javascript:void(0)" title="WeChat" onclick="openWechatModal()" style="display: inline-flex; align-items: center;">
                                     <img src="./assets/images/wechat.png" alt="WeChat" width="20" height="20">
                                 </a>
                                 <a href="./Resume.pdf" title="Resume PDF" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center;">📄</a>
@@ -55,22 +55,25 @@
 
             <!-- Biography -->
             <div class="biography" style="margin-top: 2rem;">
+                <h2 class="section-title">About Me</h2>
                 <p>
-                    Hello! I'm <strong>Haiwei Chen</strong>, a Computer Science graduate from Southwest Jiaotong University.
-                    I have embedded software engineering experience at Xiaomi and am currently preparing for graduate studies,
-                    targeting <strong>CAS Industrial AI Institute</strong> in embodied intelligence.
+                    Hello, I am <strong>Haiwei Chen</strong>, a Computer Science graduate from Southwest Jiaotong University.
+                    After graduation, I worked as an embedded software engineer in Xiaomi's home appliances team.
+                    I am currently preparing for graduate study, focusing on embodied intelligence.
                 </p>
                 <p>
-                    At Xiaomi Home Appliances, I worked on <strong>mmWave radar perception</strong>, <strong>OTA architecture</strong>,
-                    and <strong>firmware reliability</strong>. I designed TDM for MCU resource limits, derived polar-to-airflow spatial mapping,
-                    and shipped real-time "wind-follows-person" tracking on resource-constrained platforms.
+                    During university, I built a solid foundation in software engineering and participated in multiple
+                    competitions and innovation projects. I received a national second prize in an intelligent vehicle
+                    competition and a national third prize in a service outsourcing innovation competition.
                 </p>
                 <p>
-                    I am <strong>passionate about hands-on practice</strong>! I have competition background in intelligent vehicles
-                    and end-to-end engineering. I am the first inventor of two invention patents in upgrade strategy and intelligent OTA methods.
+                    At Xiaomi, I contributed to core product development, including overseas product delivery,
+                    software upgrades, reliability testing, and smart control modules. I also filed two invention patents
+                    and gained end-to-end experience from requirements to implementation and validation.
                 </p>
                 <p>
-                    <em>Feel free to contact me for any collaboration opportunities!</em>
+                    I enjoy hands-on engineering and fast learning. My long-term goal is to build reliable,
+                    intelligent systems that connect software, hardware, and real-world applications.
                 </p>
             </div>
 
@@ -79,7 +82,7 @@
                 <h2 class="section-title">Education</h2>
 
                 <div class="education-item">
-                    <table class="institution-table">
+                    <table class="institution-table work-table">
                         <tr>
                             <td class="institution-logo">
                                 <img src="./assets/images/southwest-jiaotong-university-logo-1024px.png" alt="SWJTU Logo" class="logo-img">
@@ -100,29 +103,30 @@
                 <h2 class="section-title">Work Experience</h2>
 
                 <div class="research-item">
-                    <table class="institution-table">
+                    <table class="institution-table work-table">
                         <tr>
                             <td class="institution-logo">
                                 <img src="./assets/images/logo-mi2.png" alt="Xiaomi Logo" class="logo-img">
                             </td>
                             <td class="institution-info">
                                 <h3><strong>Xiaomi Corp. (Wuhan)</strong></h3>
-                                <p><strong>小米科技（武汉）</strong></p>
-                                <p>Home Appliances Software Department | Embedded Software Engineer<br>
-                                    <em>mmWave Radar Perception, OTA Architecture, Firmware Reliability</em><br>
+                                <p><strong>Embedded Software Engineer, Home Appliances Software Team</strong><br>
+                                    <em>Product delivery, software upgrades, reliability testing, smart feature integration</em><br>
                                     Jul. 2024 - Apr. 2025</p>
                                 <ul>
-                                    <li><strong>mmWave radar perception for mass production:</strong> Owned Pro-series perception modules. Designed <strong>Time-Division Multiplexing (TDM)</strong> to address MCU resource limits and co-channel interference; derived polar-to-airflow spatial mapping algorithm, shipping real-time "wind-follows-person" tracking on resource-constrained platforms.</li>
-                                    <li><strong>OTA architecture refactor and recovery:</strong> Led domestic chip platform firmware redesign. Introduced <strong>Bootloader/App dual-partition</strong> to eliminate brick risk; located missing Boot region via reverse analysis, delivered distributed field flashing, recovering 30+ critical validation units.</li>
-                                    <li><strong>Complex signal fault diagnosis:</strong> Root-cause analysis for IR remote failures. Used logic analyzer to pinpoint 26% duty-cycle deviation from material change; designed <strong>adaptive threshold</strong> for software compensation, avoiding mold rework.</li>
-                                    <li><strong>Recognition:</strong> 3rd place, Xiaomi Home Appliances Product Innovation Competition.</li>
+                                    <li><strong>Overseas product delivery:</strong> Developed embedded software for Xiaomi's first overseas AC product line; completed major module updates across 7 core functions and resolved 40+ firmware/plugin issues through structured review cycles.</li>
+                                    <li><strong>Core product upgrades:</strong> Supported cross-platform software migration and module adaptation, fixed OTA stability and upgrade-timing issues, and delivered reliability test reports for key release changes.</li>
+                                    <li><strong>Smart feature development:</strong> Implemented communication and data conversion logic for new sensing-based control features in Pro models.</li>
+                                    <li><strong>Reliability validation:</strong> Led IO testing for multi-split systems (44 ports, 760 test records), identified 3 critical issues, and delivered comprehensive indoor/outdoor test reports.</li>
+                                    <li><strong>Award:</strong> Won <strong>Third Place</strong> in the 2024 Xiaomi Home Appliances Product Innovation Design Competition.</li>
+                                    <li><strong>Patent output:</strong> Independently filed two invention patents (<strong>CN120751358A</strong>, <strong>CN120466783A</strong>).</li>
                                 </ul>
 
                                 <!-- 横向滚动图片展示区域 -->
                                 <div class="scroll-gallery-wrapper">
                                     <div>
-                                        <a href="./assets/images/work/QQ2026219-18270.gif" target="_blank" style="flex: 0 0 auto;">
-                                            <img src="./assets/images/work/QQ2026219-18270.gif" alt="Xiaomi Work Demo">
+                                        <a href="./assets/images/work/QQ2026219-18271.gif" target="_blank" style="flex: 0 0 auto;">
+                                            <img src="./assets/images/work/QQ2026219-18271.gif" alt="Xiaomi Work Demo">
                                         </a>
                                         <a href="./assets/images/work/QQ2026219-183840.gif" target="_blank" style="flex: 0 0 auto;">
                                             <img src="./assets/images/work/QQ2026219-183840.gif" alt="Xiaomi Work Demo">
@@ -141,12 +145,66 @@
                 </div>
             </section>
 
-            <!-- Featured Projects（空） -->
+            <!-- Featured Projects -->
             <section class="projects">
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="work-achievements">
                     <div class="achievements-grid">
-                        <!-- 留空，后续添加 -->
+                        <!-- 1. 毕业设计 -->
+                        <div class="achievement-item">
+                            <div class="achievement-media">
+                                <a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf" target="_blank" title="Defense Slides">
+                                    <img src="./assets/project/Graduation_Project/cover.png" alt="Graduation Project" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%23e8eef4%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%233498db%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2212%22%3EThesis%3C/text%3E%3C/svg%3E'">
+                                </a>
+                            </div>
+                            <div class="achievement-content">
+                                <div class="achievement-title">Industry Knowledge Graph Graduation Project (Neo4j)</div>
+                                <div class="achievement-description">
+                                    Bachelor's thesis project based on <strong>Django + Neo4j</strong>, with a Vue3 visualization frontend and Python data processing scripts. The system supports industry-chain graph construction, relationship retrieval, and visual analysis.
+                                </div>
+                                <div style="margin-top: 1rem;">
+                                    <a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf" class="achievement-link" target="_blank">Defense Slides (PDF)</a>
+                                    <span style="margin: 0 0.5rem;">|</span>
+                                    <a href="mailto:chenhaiwai@foxmail.com?subject=Demo%20Request%20-%20Graduation%20Project" class="achievement-link">Request Demo</a>
+                                    <span style="margin: 0 0.5rem;">|</span>
+                                    <a href="https://github.com/tutuwai/industry-knowledge-graph-neo4j" class="achievement-link" target="_blank" rel="noreferrer">GitHub Repo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2. 智能汽车竞赛 -->
+                        <div class="achievement-item">
+                            <div class="achievement-media">
+                                <a href="./assets/project/Intelligent_Vehicle/demo.mp4" target="_blank" title="Demo Video">
+                                    <img src="./assets/project/Intelligent_Vehicle/cover.jpg" alt="Intelligent Vehicle Demo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%233498db%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22%3E▶ Demo%3C/text%3E%3C/svg%3E'">
+                                </a>
+                            </div>
+                            <div class="achievement-content">
+                                <div class="achievement-title">18th National Intelligent Vehicle Competition (Baidu Creative Track)</div>
+                                <div class="achievement-description">
+                                    <strong>National 2nd Prize.</strong> Full-stack role: edge deployment, embedded comms, telemetry. Deployed YOLOv3-MobileNetV3 on embedded device; knowledge distillation + pruning boosted inference from 3 FPS to 30 FPS. Refactored UART with DMA + idle IRQ to fix packet sticking; CRC for reliability. Built Vue3+Flask telemetry platform for WiFi video streaming and PID hot-reload, cutting debug time by ~3x.
+                                </div>
+                                <div style="margin-top: 1rem;">
+                                    <a href="mailto:chenhaiwai@foxmail.com?subject=Demo%20Request%20-%20Intelligent%20Vehicle" class="achievement-link">Request Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3. SRTP / 地铁浮置板清洁机器人 -->
+                        <div class="achievement-item">
+                            <div class="achievement-media">
+                                <a href="./assets/project/Srtp/demo.mp4" target="_blank" title="Demo Video">
+                                    <img src="./assets/project/Srtp/cover.jpg" alt="SRTP Demo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%233498db%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22%3E▶ Demo%3C/text%3E%3C/svg%3E'">
+                                </a>
+                            </div>
+                            <div class="achievement-content">
+                                <div class="achievement-title">Metro Floating Slab Cleaning Robot (Campus Innovation Project)</div>
+                                <div class="achievement-description">
+                                    <strong>Role: Electrical Control Lead.</strong> Designed an ESP32-based main control PCB, integrating multi-channel motor drivers and a WiFi module. The system enables precise remote motion control in narrow subway floating-slab environments.
+                                </div>
+                                <div style="margin-top: 1rem;">
+                                    <a href="mailto:chenhaiwai@foxmail.com?subject=Demo%20Request%20-%20Metro%20Cleaning%20Robot" class="achievement-link">Request Demo</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -155,7 +213,10 @@
             <section class="awards">
                 <h2 class="section-title">Awards & Honors</h2>
                 <ul class="awards-list">
-                    <!-- 留空，后续添加 -->
+                    <li><strong>2025/01</strong> - Xiaomi Home Appliances Product Innovation Competition, <strong>Third Place</strong></li>
+                    <li><strong>2023/08</strong> - 18th National Intelligent Vehicle Competition (Baidu Creative Track), <strong>National Second Prize</strong></li>
+                    <li><strong>2023/05</strong> - 14th China University Service Outsourcing Innovation Competition, <strong>National Third Prize</strong></li>
+                    <li><strong>2021</strong> - Southwest Jiaotong University, <strong>Comprehensive Scholarship (Third Class)</strong> & <strong>Excellent Student Cadre</strong></li>
                 </ul>
             </section>
 
@@ -167,6 +228,27 @@
             </div>
         </div>
     </main>
+
+    <div id="wechatModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center;" onclick="closeWechatModal()">
+        <div style="background:#fff; border-radius:10px; padding:12px; max-width:90vw; max-height:90vh;" onclick="event.stopPropagation()">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <strong style="font-size:14px;">WeChat</strong>
+                <button onclick="closeWechatModal()" style="border:none; background:transparent; font-size:18px; cursor:pointer;">×</button>
+            </div>
+            <img src="./assets/images/wechat.jpg" alt="WeChat QR" style="max-width:80vw; max-height:75vh; display:block;">
+        </div>
+    </div>
+
+    <script>
+      function openWechatModal() {
+        var modal = document.getElementById('wechatModal');
+        modal.style.display = 'flex';
+      }
+      function closeWechatModal() {
+        var modal = document.getElementById('wechatModal');
+        modal.style.display = 'none';
+      }
+    </script>
 </body>
 
 </html>

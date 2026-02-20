@@ -105,6 +105,13 @@ body {
     padding-bottom: 0.5rem;
 }
 
+.section-subtitle {
+    margin-left: 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #6b7280;
+}
+
 section {
     margin-bottom: 3rem;
 }
@@ -129,12 +136,49 @@ section {
 
 .institution-info {
     vertical-align: top;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .logo-img {
     width: 90px;
     height: 90px;
     object-fit: contain;
+}
+
+/* Work section: reduce logo column to avoid text squeezing */
+.research .institution-logo {
+    width: 92px;
+    padding-right: 0.75rem;
+}
+
+.research .logo-img {
+    width: 72px;
+    height: 72px;
+}
+
+/* Work text readability tuning */
+.work-table {
+    table-layout: fixed;
+}
+
+.work-table .institution-logo {
+    width: 92px;
+}
+
+.work-table .institution-info p,
+.work-table .institution-info li {
+    max-width: 80ch;
+}
+
+.research .institution-info ul {
+    margin-top: 0.6rem;
+    padding-left: 1.2rem;
+}
+
+.research .institution-info li {
+    line-height: 1.65;
+    margin-bottom: 0.55rem;
 }
 
 .institution-info h3 {
@@ -160,6 +204,7 @@ section {
 
 .institution-info li {
     margin-bottom: 0.4rem;
+    line-height: 1.75;
 }
 
 /* 横向滚动图片展示 */
@@ -168,8 +213,8 @@ section {
     max-width: 100%;
     overflow-x: auto;
     margin-top: 1rem;
-    margin-bottom: 2rem;
-    margin-left: 120px;
+    margin-bottom: 0.8rem;
+    margin-left: 0;
 }
 
 .scroll-gallery-wrapper > div {
@@ -182,7 +227,7 @@ section {
 }
 
 .scroll-gallery-wrapper img {
-    height: 120px;
+    height: 100px;
     margin-right: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 8px #eee;
