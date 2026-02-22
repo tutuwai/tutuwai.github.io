@@ -212,14 +212,18 @@ section {
     width: 100%;
     max-width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
     margin-top: 1rem;
     margin-bottom: 0.8rem;
     margin-left: 0;
+    padding-bottom: 6px;
 }
 
 .scroll-gallery-wrapper > div {
-    display: flex;
+    display: inline-flex;
     flex-wrap: nowrap;
+    min-width: max-content;
 }
 
 .scroll-gallery-wrapper a {
@@ -431,6 +435,14 @@ section {
         table-layout: auto;
     }
 
+    .work-table,
+    .work-table tbody,
+    .work-table tr,
+    .work-table td {
+        display: block;
+        width: 100%;
+    }
+
     .work-table .institution-logo {
         width: 100%;
         padding-right: 0;
@@ -447,6 +459,14 @@ section {
         max-width: none;
         overflow-wrap: anywhere;
         word-break: break-word;
+    }
+
+    .work-table .institution-info {
+        min-width: 0;
+    }
+
+    .work-table .institution-info p {
+        line-height: 1.6;
     }
 
     .work-table .institution-info ul {
