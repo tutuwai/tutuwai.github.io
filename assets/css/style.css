@@ -364,6 +364,24 @@ section {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .page-content {
+        padding: 1.2rem 0;
+    }
+
+    .section-title {
+        font-size: 1.55rem;
+        margin-bottom: 1rem;
+    }
+
     .profile-table {
         display: block;
     }
@@ -427,10 +445,17 @@ section {
     .work-table .institution-info li,
     .research .institution-info {
         max-width: none;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .work-table .institution-info ul {
+        padding-left: 1rem;
     }
 
     .work-table .institution-info li {
         line-height: 1.7;
+        margin-bottom: 0.45rem;
     }
 
     .scroll-gallery-wrapper {
@@ -454,9 +479,26 @@ section {
     .achievement-content {
         padding: 1rem;
     }
+
+    .achievement-description {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .name {
+        font-size: 1.7rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
     .scroll-gallery-wrapper img {
         height: 72px;
     }
