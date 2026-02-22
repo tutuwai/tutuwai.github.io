@@ -408,8 +408,38 @@ section {
         margin-bottom: 1rem;
     }
 
+    /* Mobile fix: keep work section from shifting right */
+    .work-table {
+        table-layout: auto;
+    }
+
+    .work-table .institution-logo {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .work-table .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .work-table .institution-info p,
+    .work-table .institution-info li,
+    .research .institution-info {
+        max-width: none;
+    }
+
+    .work-table .institution-info li {
+        line-height: 1.7;
+    }
+
     .scroll-gallery-wrapper {
         margin-left: 0;
+        margin-right: 0;
+    }
+
+    .scroll-gallery-wrapper img {
+        height: 84px;
     }
 
     .achievement-item {
@@ -427,6 +457,10 @@ section {
 }
 
 @media (max-width: 480px) {
+    .scroll-gallery-wrapper img {
+        height: 72px;
+    }
+
     .achievement-media {
         height: 140px;
     }
