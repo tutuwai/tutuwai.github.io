@@ -150,7 +150,41 @@
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="work-achievements">
                     <div class="achievements-grid">
-                        <!-- 1. 毕业设计 -->
+                        <!-- 1. VLA / 多模态机器人控制 -->
+                        <div class="achievement-item">
+                            <div class="achievement-media">
+                                <a href="./assets/project/vla/cover.gif" target="_blank" title="VLA Project Cover">
+                                    <img src="./assets/project/vla/cover.gif" alt="VLA Project Cover" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%233498db%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22%3EVLA%3C/text%3E%3C/svg%3E'">
+                                </a>
+                            </div>
+                            <div class="achievement-content">
+                                <div class="achievement-title">OpenVLA-OFT Reproduction for Bimanual Manipulation</div>
+                                <div class="achievement-description">
+                                    Reproduced an end-to-end robot control pipeline based on OpenVLA-OFT, including simulation data generation, RLDS conversion, distributed LoRA training, and evaluation. Built ~500 expert trajectories with domain randomization, trained a 7.5B model using 4×4090 + FSDP, and reached 83% success in simulation. Fixed the terminal-action truncation issue in data loading to remove end-stage action stagnation and keep success rate stable above 80%.
+                                </div>
+                                <div style="margin-top: 1rem;">
+                                    <a href="mailto:chenhaiwai@foxmail.com?subject=Demo%20Request%20-%20OpenVLA-OFT%20Project" class="achievement-link">Request Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2. 智能汽车竞赛 -->
+                        <div class="achievement-item">
+                            <div class="achievement-media">
+                                <a href="https://www.bilibili.com/video/BV1eRfGBgEpp/?spm_id_from=333.1387.homepage.video_card.click" target="_blank" title="Demo Video" rel="noreferrer">
+                                    <img src="./assets/project/Intelligent_Vehicle/cover.jpg" alt="Intelligent Vehicle Demo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%233498db%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22%3E▶ Demo%3C/text%3E%3C/svg%3E'">
+                                </a>
+                            </div>
+                            <div class="achievement-content">
+                                <div class="achievement-title">18th National Intelligent Vehicle Competition (Baidu Creative Track)</div>
+                                <div class="achievement-description">
+                                    <strong>National 2nd Prize.</strong> Full-stack role: edge deployment, embedded comms, telemetry. Deployed YOLOv3-MobileNetV3 on embedded device; knowledge distillation + pruning boosted inference from 3 FPS to 30 FPS. Refactored UART with DMA + idle IRQ to fix packet sticking; CRC for reliability. Built Vue3+Flask telemetry platform for WiFi video streaming and PID hot-reload, cutting debug time by ~3x.
+                                </div>
+                                <div style="margin-top: 1rem;">
+                                    <a href="https://www.bilibili.com/video/BV1eRfGBgEpp/?spm_id_from=333.1387.homepage.video_card.click" class="achievement-link" target="_blank" rel="noreferrer">Watch Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3. 毕业设计 -->
                         <div class="achievement-item">
                             <div class="achievement-media">
                                 <a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf" target="_blank" title="Defense Slides">
@@ -168,40 +202,6 @@
                                     <a href="https://www.bilibili.com/video/BV1bwfVBvEZx/?vd_source=15b30811ebad16d1dff1eb569e2cd9da" class="achievement-link" target="_blank" rel="noreferrer">Watch Demo</a>
                                     <span style="margin: 0 0.5rem;">|</span>
                                     <a href="https://github.com/tutuwai/industry-knowledge-graph-neo4j" class="achievement-link" target="_blank" rel="noreferrer">GitHub Repo</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 2. VLA / 多模态机器人控制 -->
-                        <div class="achievement-item">
-                            <div class="achievement-media">
-                                <a href="./assets/project/vla/cover.gif" target="_blank" title="VLA Project Cover">
-                                    <img src="./assets/project/vla/cover.gif" alt="VLA Project Cover" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%233498db%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22%3EVLA%3C/text%3E%3C/svg%3E'">
-                                </a>
-                            </div>
-                            <div class="achievement-content">
-                                <div class="achievement-title">OpenVLA-OFT Reproduction for Bimanual Manipulation</div>
-                                <div class="achievement-description">
-                                    Reproduced an end-to-end robot control pipeline based on OpenVLA-OFT, including simulation data generation, RLDS conversion, distributed LoRA training, and evaluation. Built ~500 expert trajectories with domain randomization, trained a 7.5B model using 4×4090 + FSDP, and reached 83% success in simulation. Fixed the terminal-action truncation issue in data loading to remove end-stage action stagnation and keep success rate stable above 80%.
-                                </div>
-                                <div style="margin-top: 1rem;">
-                                    <a href="mailto:chenhaiwai@foxmail.com?subject=Demo%20Request%20-%20OpenVLA-OFT%20Project" class="achievement-link">Request Demo</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 3. 智能汽车竞赛 -->
-                        <div class="achievement-item">
-                            <div class="achievement-media">
-                                <a href="https://www.bilibili.com/video/BV1eRfGBgEpp/?spm_id_from=333.1387.homepage.video_card.click" target="_blank" title="Demo Video" rel="noreferrer">
-                                    <img src="./assets/project/Intelligent_Vehicle/cover.jpg" alt="Intelligent Vehicle Demo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%233498db%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22%3E▶ Demo%3C/text%3E%3C/svg%3E'">
-                                </a>
-                            </div>
-                            <div class="achievement-content">
-                                <div class="achievement-title">18th National Intelligent Vehicle Competition (Baidu Creative Track)</div>
-                                <div class="achievement-description">
-                                    <strong>National 2nd Prize.</strong> Full-stack role: edge deployment, embedded comms, telemetry. Deployed YOLOv3-MobileNetV3 on embedded device; knowledge distillation + pruning boosted inference from 3 FPS to 30 FPS. Refactored UART with DMA + idle IRQ to fix packet sticking; CRC for reliability. Built Vue3+Flask telemetry platform for WiFi video streaming and PID hot-reload, cutting debug time by ~3x.
-                                </div>
-                                <div style="margin-top: 1rem;">
-                                    <a href="https://www.bilibili.com/video/BV1eRfGBgEpp/?spm_id_from=333.1387.homepage.video_card.click" class="achievement-link" target="_blank" rel="noreferrer">Watch Demo</a>
                                 </div>
                             </div>
                         </div>
