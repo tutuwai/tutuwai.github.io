@@ -22,7 +22,7 @@
   </header>
   <section id="education" aria-labelledby="education-title"><h2 id="education-title">Education</h2>
     <div class="edu-grid"><article><h3>Institute of Computing Technology, CAS</h3><p>Master’s student · Advisor: Yunji Chen</p><p class="date">Sep 2026 – present</p></article>
-    <article><img src="./assets/images/southwest-jiaotong-university-logo-1024px.png" class="school-logo" width="46" height="46" alt=""><h3>Southwest Jiaotong University</h3><p>Bachelor’s degree in Computer Science and Technology</p><p class="date">Sep 2020 – Jun 2024</p></article></div>
+    <article><img src="./assets/images/southwest-jiaotong-university-logo-1024px.png" class="school-logo" width="46" height="46" alt=""><h3>Southwest Jiaotong University</h3><p>Bachelor’s degree in Computer Science and Technology<br>School of Computing and Artificial Intelligence</p><p class="date">Sep 2020 – Jun 2024</p></article></div>
   </section>
   <section id="experience" aria-labelledby="work-title"><h2 id="work-title">Work experience</h2>
     <div class="job"><img class="mi-logo" src="./assets/images/logo-mi2.png" alt="" width="52" height="52"><div><h3>Xiaomi · Embedded Software Engineer</h3><p>Home Appliances Software Platform · Wuhan</p></div><span class="date">Jul 2024 – Apr 2025</span></div>
@@ -45,12 +45,26 @@
       <div><p class="date">NeurIPS competition · Aug – Nov 2026</p><h3>RoboSynChallenge · Ten-task bimanual manipulation</h3>
       <p>I built the PiPER deployment and evaluation system for all ten tasks, synchronizing three RGB views, 14-dimensional robot state and CAN commands. I generated 1,000 simulation demonstrations for table rearrangement and tuned how many actions the arms executed before replanning.</p>
       <p>Our team fine-tuned π0.5 on a 77:23 mix of simulated and real demonstrations, with a second real-data stage on selected tasks. We placed <strong>3rd of 47 teams in the simulation preliminaries</strong>. The pipette task I led ranked first by overall score.</p>
+      <details id="competition-tasks"><summary>Tasks supported by the platform</summary>
+        <ul>
+          <li>Ring a bell</li>
+          <li>Arrange items on a table</li>
+          <li>Pour water</li>
+          <li>Load and lift a basket</li>
+          <li>Hand over an item and place it in a container</li>
+          <li>Open a drawer and put an item inside</li>
+          <li>Operate a mixer</li>
+          <li>Join two parts using both arms</li>
+          <li>Operate a pipette</li>
+          <li>Load samples into a rack</li>
+        </ul>
+      </details>
       <div class="links"><a href="#recordings">Real-robot frames</a><a href="https://robosyn-bench.net/#/leaderboard">Team standings</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">Task score</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">Team checkpoints</a></div></div>
     </article>
     <article class="project" id="smart-car"><a class="art" href="https://www.bilibili.com/video/BV1eRfGBgEpp/"><img src="./assets/images/previews/car.webp" alt="Competition vehicle with its camera, electronics and wiring"></a>
       <div><p class="date">Baidu Creative Track · May – Aug 2023</p><h3>National Intelligent Vehicle Competition</h3><p><strong>National second prize.</strong> I deployed YOLOv3-MobileNetV3 on the car and used knowledge distillation and pruning to raise inference from 3 to 30 FPS. I implemented DMA-based UART reception, idle-line detection and CRC checking, and built Vue and Flask telemetry for Wi-Fi video and live PID tuning.</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">Watch the vehicle</a></div></div></article>
     <article class="project"><a class="art" href="./assets/project/vla/cover.gif"><img src="./assets/images/previews/openvla.webp" alt="RoboTwin simulation views from a bimanual manipulation episode"></a>
-      <div><p class="date">Independent project · 2026</p><h3>OpenVLA-OFT on RoboTwin</h3><p>I generated about 500 randomized expert trajectories, converted them to RLDS and fine-tuned the policy on four RTX 4090 GPUs with LoRA and FSDP. I fixed a 25-step action window that discarded the final 24 observation starts of each long episode.</p><div class="links"><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning">Training code</a><a href="./assets/project/vla/cover.gif">Simulation demo</a></div></div></article>
+      <div><p class="date">Independent project · 2026</p><h3>OpenVLA-OFT on RoboTwin</h3><p>I generated about 500 randomized expert trajectories, converted them to RLDS and fine-tuned a 7.5B-parameter policy for about 40,000 steps on four RTX 4090 GPUs using LoRA and FSDP. I fixed the 25-step action-window sampler so that training includes the last 24 observation starts of each long episode.</p><div class="links"><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning">Training code</a><a href="./assets/project/vla/cover.gif">Simulation demo</a></div></div></article>
     <article class="project"><a class="art" href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf"><img src="./assets/images/previews/graph.webp" loading="lazy" alt="Interactive industry knowledge graph interface"></a>
       <div><p class="date">Undergraduate thesis</p><h3>Industry knowledge graph</h3><p>I built a Django and Neo4j system for exploring industry-chain relationships, with Python data processing and an interactive Vue frontend.</p><div class="links"><a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf">Defense slides</a><a href="https://github.com/tutuwai/industry-knowledge-graph-neo4j">Code</a><a href="https://www.bilibili.com/video/BV1bwfVBvEZx/">Demo</a></div></div></article>
     <article class="project"><a class="art" href="https://www.bilibili.com/video/BV1YRfGBgE7h/"><img loading="lazy" src="./assets/images/previews/crawler.webp" alt="Tracked metro-cleaning robot prototype"></a>
