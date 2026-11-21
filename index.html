@@ -9,7 +9,7 @@
   <meta property="og:image" content="https://tutuwai.github.io/assets/project/robosyn-table.webp">
   <link rel="alternate" hreflang="zh-CN" href="https://tutuwai.github.io/zh.html">
   <link rel="alternate" hreflang="en" href="https://tutuwai.github.io/">
-  <link rel="stylesheet" href="./assets/css/style.css?v=profile5">
+  <link rel="stylesheet" href="./assets/css/style.css?v=profile6">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -65,7 +65,7 @@
           <li>Load samples into a rack</li>
         </ul>
       </details>
-      <div class="links"><a href="#recordings">Real-robot frames</a><a href="https://robosyn-bench.net/#/leaderboard">Team standings</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">Task score</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">Team checkpoints</a></div></div>
+      <div class="links"><a href="#demo">46-second robot demo</a><a href="#recordings">Browse frames</a><a href="https://robosyn-bench.net/#/leaderboard">Team standings</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">Task score</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">Team checkpoints</a></div></div>
     </article>
     <article class="project" id="smart-car"><a class="art" href="https://www.bilibili.com/video/BV1eRfGBgEpp/"><img src="./assets/images/previews/car.webp" alt="Competition vehicle with its camera, electronics and wiring"></a>
       <div><p class="date">Baidu Creative Track · May – Aug 2023</p><h3>National Intelligent Vehicle Competition</h3><p><strong>National second prize.</strong> I collected vision data and deployed the detector on the car. Our team used distillation and pruning to raise YOLOv3-MobileNetV3 inference from 3 to 30 FPS.</p><p>When commands came in rapid succession, the vehicle sometimes missed or misread them. I revised the serial protocol, used DMA interrupts for transmission and reception, and built a Vue3 interface to tune PID gains while watching the live video. A teammate implemented the Flask relay that forwarded commands to the STM32.</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">Watch the vehicle</a></div></div></article>
@@ -79,6 +79,12 @@
     <article class="project"><a class="art" href="https://www.bilibili.com/video/BV1YRfGBgE7h/"><img loading="lazy" src="./assets/images/previews/crawler.webp" alt="Tracked metro-cleaning robot prototype"></a>
       <div><p class="date">Undergraduate innovation project</p><h3>Metro floating-slab cleaning robot</h3><p>As electrical control lead, I designed an ESP32 main board integrating motor drivers and Wi-Fi for remotely steering the prototype beneath floating slabs.</p><div class="links"><a href="https://www.bilibili.com/video/BV1YRfGBgE7h/">Robot demo</a></div></div></article>
     <article class="hil-note"><h3>HIL-SERL on PiPER</h3><p>I adapted the Franka baseline for gear insertion. I converted 19 demonstrations into 3,740 replay transitions, checked offline learner loading and validated the visual reward on hardware using gripper state and a three-frame check.</p></article>
+    <details id="demo"><summary>Watch the 46-second robot demo</summary>
+      <figure class="viewer"><video aria-label="Haiwei Chen's bimanual manipulation demo" controls playsinline preload="none" width="1280" height="720" poster="./assets/project/robosyn-demo-poster.webp">
+        <source src="./assets/project/robosyn-demo.mp4" type="video/mp4">
+        <track kind="subtitles" srclang="en" label="English" src="./assets/project/robosyn-demo.en.vtt" default>
+      </video><figcaption>Table rearrangement, basket handling, bell pressing, and a dropped fork investigated using gripper commands. <a download href="./assets/project/robosyn-demo.mp4">Download MP4 (6.4 MB)</a></figcaption></figure>
+    </details>
     <details id="recordings"><summary>Explore real-robot recordings · three tasks, three camera views</summary>
     <figure class="viewer">
         <div class="viewer-stage"><img id="still" src="./assets/project/robosyn-table.webp" width="960" height="480" alt="Overhead and wrist views of two arms arranging cutlery around a plate."><canvas id="sequence" width="768" height="384" hidden role="img" aria-label="Selected frame from a real PiPER evaluation, shown from three cameras."></canvas></div>
@@ -107,6 +113,6 @@
 <footer class="container"><span>Haiwei Chen · November 2026</span><a href="mailto:chenhaiwai@foxmail.com">chenhaiwai@foxmail.com</a></footer>
 <dialog id="wechat" aria-labelledby="wechat-title"><div class="dialog-head"><h2 id="wechat-title">WeChat</h2><button type="button" id="close-wechat">Close</button></div><img width="260" height="300" src="./assets/images/wechat.jpg" alt="Scan with WeChat to contact Haiwei Chen"></dialog>
 <script src="./assets/sequence.js?v=2" defer></script>
-<script src="./assets/profile.js" defer></script>
+<script src="./assets/profile.js?v=2" defer></script>
 
 </body></html>

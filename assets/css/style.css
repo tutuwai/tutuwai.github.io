@@ -68,6 +68,7 @@ h3 { font-size:1.15rem; color:var(--ink); line-height:1.3; font-weight:650; lett
 .hil-note h3 { margin:0 0 5px; }
 summary { font-weight:600; color:var(--accent); }
 .viewer { max-width:780px; margin:12px 0; }
+.viewer video { display:block; width:100%; height:auto; background:#101f23; }
 .viewer-stage { aspect-ratio:2/1; background:#182433; }
 .viewer-stage img,.viewer-stage canvas { width:100%; display:block; height:auto; }
 .viewer-controls,.tasks,.scrub { display:flex; align-items:center; gap:7px; flex-wrap:wrap; }

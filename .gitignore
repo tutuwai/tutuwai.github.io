@@ -1,6 +1,7 @@
-# 视频文件（网站用 GIF，不需要上传原视频）
+# 原始录像只保存在本地，项目页发布剪辑后的演示片。
 assets/videos/
 *.mp4
+!assets/project/robosyn-demo.mp4
 
 # 内部文档与参考资料（不需上线）
 应届生转正述职-陈海崴.pdf

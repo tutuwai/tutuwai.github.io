@@ -1,0 +1,27 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:08.000 line:75%
+Table rearrangement · 2× speed
+I built the ten-task PiPER platform with three cameras, 14 state values and CAN control.
+
+00:00:08.000 --> 00:00:16.000 line:75%
+The policy predicts 50 actions. We execute 15 before taking a new observation.
+
+00:00:16.000 --> 00:00:23.000 line:75%
+Basket handling · 2× speed
+The arms load the basket, then grasp its handle.
+
+00:00:23.000 --> 00:00:30.000 line:75%
+Synchronized overhead and wrist cameras let us score each trial and inspect failures.
+
+00:00:30.000 --> 00:00:38.000 line:75%
+Bell pressing · real time
+This trial used a 20-action prefix. The right wrist camera shows the approach.
+
+00:00:38.000 --> 00:00:42.000 line:75%
+A separate failed table trial · two left-wrist frames
+The fork slides between 19.12 and 19.79 seconds.
+
+00:00:42.000 --> 00:00:46.000 line:75%
+All 37 commands in this four-second interval requested a 0 mm opening.
+The commanded opening alone cannot establish contact force.

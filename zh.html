@@ -10,7 +10,7 @@
 <meta content="https://tutuwai.github.io/assets/project/robosyn-table.webp" property="og:image"/>
 <link href="https://tutuwai.github.io/zh.html" hreflang="zh-CN" rel="alternate"/>
 <link href="https://tutuwai.github.io/" hreflang="en" rel="alternate"/>
-<link href="./assets/css/style.css?v=profile5" rel="stylesheet"/>
+<link href="./assets/css/style.css?v=profile6" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" href="#main">跳到正文</a>
@@ -64,7 +64,7 @@
 <li>样品插架</li>
 </ul>
 </details>
-<div class="links"><a href="#recordings">看真机回放</a><a href="https://robosyn-bench.net/#/leaderboard">团队排名</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">移液器单项成绩</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">团队模型权重</a></div></div>
+<div class="links"><a href="#demo">46 秒真机演示</a><a href="#recordings">逐帧回放</a><a href="https://robosyn-bench.net/#/leaderboard">团队排名</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">移液器单项成绩</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">团队模型权重</a></div></div>
 </article>
 <article class="project" id="smart-car"><a class="art" href="https://www.bilibili.com/video/BV1eRfGBgEpp/"><img alt="智能汽车赛赛车的相机与电路" src="./assets/images/previews/car.webp"/></a>
 <div><p class="date">百度创意组 · 2023.05 – 2023.08</p><h3>全国大学生智能汽车竞赛</h3><p>获<strong>全国二等奖</strong>。我负责车端识别数据采集与模型部署。团队以知识蒸馏和剪枝优化 YOLOv3-MobileNetV3，推理从 3 FPS 提至 30 FPS。</p><p>高频发送控制指令时，车端偶发丢指令或解析错误。我调整串口收发协议，用 DMA 中断收发数据，并编写 Vue3 调参界面。界面经队友实现的 Flask 中转服务连接 STM32，支持看着实时图传调节 PID 参数。</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">赛车演示</a></div></div></article>
@@ -78,7 +78,12 @@
 <article class="project"><a class="art" href="https://www.bilibili.com/video/BV1YRfGBgE7h/"><img alt="履带式清洁机器人样机" loading="lazy" src="./assets/images/previews/crawler.webp"/></a>
 <div><p class="date">大学生创新项目</p><h3>地铁浮置板清洁机器人</h3><p>担任电控负责人，设计集成电机驱动与 Wi-Fi 通信的 ESP32 主控板，实现地铁浮置板下清洁机器人样机的远程行走控制。</p><div class="links"><a href="https://www.bilibili.com/video/BV1YRfGBgE7h/">样机演示</a></div></div></article>
 <article class="hil-note"><h3>HIL-SERL · PiPER 齿轮插入适配</h3><p>将 Franka 齿轮插入基线适配到 PiPER。采集 19 条示范，转换为 3,740 条状态转移，验证回放采样和 JAX 学习器离线加载。为减少夹爪仍托住齿轮时的误判，在真机上验证了视觉奖励、夹爪开度与连续三帧联合判定。</p></article>
-<details id="recordings"><summary>查看三项任务的真机回放</summary>
+<details id="demo"><summary>播放 46 秒真机演示</summary>
+<figure class="viewer"><video aria-label="陈海崴的双臂操作项目演示" controls playsinline preload="none" width="1280" height="720" poster="./assets/project/robosyn-demo-poster.webp">
+<source src="./assets/project/robosyn-demo.mp4" type="video/mp4"/>
+<track kind="subtitles" srclang="en" label="English" src="./assets/project/robosyn-demo.en.vtt"/>
+</video><figcaption>桌面整理、装盒提篮、按铃与一次餐叉滑落的日志复盘。<a download href="./assets/project/robosyn-demo.mp4">下载 MP4（6.4 MB）</a></figcaption></figure></details>
+<details id="recordings"><summary>查看三项任务的逐帧回放</summary>
 <figure class="viewer">
 <div class="viewer-stage"><img alt="双臂围绕盘子整理餐具的顶视与腕部画面" height="480" id="still" src="./assets/project/robosyn-table.webp" width="960"/><canvas aria-label="PiPER 真机评测的三机位同步画面" height="384" hidden="" id="sequence" role="img" width="768"></canvas></div>
 <div class="viewer-controls" hidden="" id="controls">
@@ -106,5 +111,5 @@
 <footer class="container"><span>陈海崴 · 2026 年 11 月</span><a href="mailto:chenhaiwai@foxmail.com">chenhaiwai@foxmail.com</a></footer>
 <dialog aria-labelledby="wechat-title" id="wechat"><div class="dialog-head"><h2 id="wechat-title">微信</h2><button id="close-wechat" type="button">关闭</button></div><img alt="用微信扫码联系陈海崴" height="300" src="./assets/images/wechat.jpg" width="260"/></dialog>
 <script defer="" src="./assets/sequence.js?v=2"></script>
-<script defer="" src="./assets/profile.js"></script>
+<script defer="" src="./assets/profile.js?v=2"></script>
 </body></html>
