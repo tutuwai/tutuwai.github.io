@@ -31,7 +31,7 @@
     <ul class="contributions">
       <li><strong>Production firmware.</strong> Led software iteration and cross-platform migration for two A-grade production projects and contributed to Xiaomi’s first overseas AC line. Reworked seven core modules and resolved more than 40 firmware defects, including OTA timing issues.</li>
       <li><strong>Dual-radar sensing.</strong> Designed the MCU serial protocol for two millimeter-wave radars. Time-shared the sensors to reduce interference, transformed detections into device coordinates and merged duplicates for person-following airflow.</li>
-      <li><strong>Hardware validation.</strong> Traced three low-level defects from 760 records across 44 I/O ports on a multi-split AC system and delivered 16 test reports.</li>
+      <li><strong>Hardware validation.</strong> Traced three low-level defects from 760 records across 44 I/O ports on a multi-split AC system and delivered 16 test reports. I was also the first inventor on two <a href="#patents">firmware upgrade inventions</a>, including a granted patent for scheduling over-the-air updates.</li>
     </ul>
     <div class="gallery">
       <a href="./assets/images/work/QQ2026219-18271.gif"><img src="./assets/images/previews/radar.webp" alt="Air-conditioner airflow product demonstration"><span>Airflow demo ↗</span></a>
@@ -46,10 +46,14 @@
       <a href="#recordings" class="art"><img src="./assets/project/robosyn-table.webp" alt="Overhead and wrist views of PiPER arranging cutlery"></a>
       <div><p class="date">NeurIPS competition · Aug – Nov 2026</p><h3>RoboSynChallenge · Ten-task bimanual manipulation</h3>
       <p>I built the PiPER deployment and evaluation system for all ten tasks, synchronizing three RGB views, 14-dimensional robot state and CAN commands. I generated 1,000 simulation demonstrations for table rearrangement and tuned how many actions the arms executed before replanning.</p>
-      <p>Our team fine-tuned π0.5 on a 77:23 mix of simulated and real demonstrations, with a second real-data stage on selected tasks. We placed <strong>3rd of 47 teams in the simulation preliminaries</strong>. The pipette task I led ranked first by overall score.</p>
+      <p>Our team fine-tuned π0.5 on a 77:23 mix of simulated and real demonstrations, with a second real-data stage on selected tasks. We placed <strong>3rd of 47 teams in the simulation preliminaries</strong>. The pipette task I led ranked first by overall score in those simulation preliminaries.</p>
       <details id="team-report"><summary>Team technical report · Synthetic data coverage and two-stage adaptation of π0.5</summary>
-        <p>Each task used 1,000 simulated trajectories and 60 official real-robot demonstrations. Our scripted expert succeeded more often at some object placements, so those placements dominated the training set. We randomized object and camera poses and lighting, then used Qwen offline to select demonstrations with more even spatial coverage.</p>
+        <p>Each task used 1,000 simulated trajectories and 60 official real-robot demonstrations. Our scripted expert succeeded more often at some object placements, so those placements dominated the training set. We randomized object and camera poses and lighting, then used Qwen offline to select demonstrations with the aim of reducing the bias toward common placements.</p>
         <p>We observed improvements at some placements near the edge of the sampled region. Continued training on real demonstrations sometimes hurt performance at other placements, so we used that second stage selectively. I co-authored the report, built the ten-task deployment platform, and generated the table-rearrangement simulations.</p>
+      </details>
+      <details id="data-coverage"><summary>Data retrospective · How many beaker and mixer placements survived filtering?</summary>
+        <p>After filtering 600 simulated mixer demonstrations down to 449, all 25 position bins for each object still contained samples. Counting the two objects together gave a different picture: only 271 of the 309 observed placement pairs remained. Each orange square is one pair lost from the subset.</p>
+        <figure class="viewer"><a href="./assets/project/mixer-layouts.webp"><img loading="lazy" width="1908" height="1007" style="width:100%;height:auto" src="./assets/project/mixer-layouts.webp" alt="All 25 position bins survive for each object individually. Counting beaker and mixer bins together reveals that 38 of the 309 original pairs disappeared."></a><figcaption>Two views of the same simulated starting positions. Real-robot success on these placements remains an open evaluation question.</figcaption></figure>
       </details>
       <details id="competition-tasks"><summary>Tasks supported by the platform</summary>
         <ul>
@@ -68,7 +72,7 @@
       <div class="links"><a href="#demo">46-second robot demo</a><a href="#recordings">Browse frames</a><a href="https://robosyn-bench.net/#/leaderboard">Team standings</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">Task score</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">Team checkpoints</a></div></div>
     </article>
     <article class="project" id="smart-car"><a class="art" href="https://www.bilibili.com/video/BV1eRfGBgEpp/"><img src="./assets/images/previews/car.webp" alt="Competition vehicle with its camera, electronics and wiring"></a>
-      <div><p class="date">Baidu Creative Track · May – Aug 2023</p><h3>National Intelligent Vehicle Competition</h3><p><strong>National second prize.</strong> I collected vision data and deployed the detector on the car. Our team used distillation and pruning to raise YOLOv3-MobileNetV3 inference from 3 to 30 FPS.</p><p>When commands came in rapid succession, the vehicle sometimes missed or misread them. I revised the serial protocol, used DMA interrupts for transmission and reception, and built a Vue3 interface to tune PID gains while watching the live video. A teammate implemented the Flask relay that forwarded commands to the STM32.</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">Watch the vehicle</a></div></div></article>
+      <div><p class="date">Baidu Creative Track · May – Aug 2023</p><h3>18th National Intelligent Vehicle Competition</h3><p><strong>National second prize.</strong> I collected vision data and deployed the detector on the car. Our team used distillation and pruning to raise YOLOv3-MobileNetV3 inference from 3 to 30 FPS.</p><p>When commands came in rapid succession, the vehicle sometimes missed or misread them. I revised the serial protocol, used DMA interrupts for transmission and reception, and built a Vue3 interface to tune PID gains while watching the live video. A teammate implemented the Flask relay that forwarded commands to the STM32.</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">Watch the vehicle</a></div></div></article>
     <article class="project"><a class="art" href="./assets/project/vla/cover.gif"><img src="./assets/images/previews/openvla.webp" alt="RoboTwin simulation views from a bimanual manipulation episode"></a>
       <div><p class="date">Independent project · 2026</p><h3>OpenVLA-OFT on RoboTwin</h3>
         <p>I trained a policy to pick up a hammer and strike a block at a randomized position. I generated about 500 expert trajectories, converted them to RLDS and fine-tuned a 7.5B-parameter model for about 40,000 steps on four RTX 4090 GPUs using LoRA and FSDP.</p>
@@ -106,7 +110,7 @@
   <section id="awards"><h2>Awards &amp; honors</h2><dl class="records">
     <dt>2026</dt><dd>RoboSynChallenge simulation preliminaries · team third place out of 47.</dd>
     <dt>2025</dt><dd>Xiaomi Home Appliances Product Innovation Competition · third place.</dd>
-    <dt>2023</dt><dd>National Intelligent Vehicle Competition · national second prize. China University Service Outsourcing Innovation Competition · national third prize, project lead.</dd>
+    <dt>2023</dt><dd>National Intelligent Vehicle Competition · national second prize. 14th China University Service Outsourcing Innovation Competition · national third prize in the industry-sponsored track, project lead.</dd>
     <dt>2021</dt><dd>Southwest Jiaotong University · comprehensive scholarship (third class) and excellent student cadre.</dd>
   </dl></section>
 </main>

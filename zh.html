@@ -32,7 +32,7 @@
 <ul class="contributions">
 <li><strong>量产固件。</strong>主导两款 A 级量产项目的软件迭代与跨平台移植，参与首批出海空调研发。重构七个核心模块，解决包括 OTA 升级时序在内的四十余项固件缺陷。</li>
 <li><strong>双毫米波雷达。</strong>独立设计 MCU 串口协议，以分时调度抑制双雷达同频干扰，将两路检测目标转换到设备坐标系并去重，为空调风随人动提供位置输入。</li>
-<li><strong>软硬件联调。</strong>对多联机的 44 个 I/O 口和 760 条状态记录进行排查，定位三处底层缺陷，输出 16 份测试报告。</li>
+<li><strong>软硬件联调。</strong>对多联机的 44 个 I/O 口和 760 条状态记录进行排查，定位三处底层缺陷，输出 16 份测试报告。另以第一发明人提出<a href="#patents">空调静默 OTA 升级和 NFC 控制参数升级方案</a>，其中静默 OTA 发明已获授权。</li>
 </ul>
 <div class="gallery">
 <a href="./assets/images/work/QQ2026219-18271.gif"><img alt="风随人动演示" src="./assets/images/previews/radar.webp"/><span>风随人动演示 ↗</span></a>
@@ -46,10 +46,13 @@
 <a class="art" href="#recordings"><img alt="PiPER 整理桌面的顶视与腕部画面" src="./assets/project/robosyn-table.webp"/></a>
 <div><p class="date">NeurIPS 竞赛 · 2026.08 – 2026.11</p><h3>RoboSynChallenge · 十任务双臂操作与真机部署</h3>
 <p>我搭建了覆盖十项任务的 PiPER 双臂真机部署与评测平台，接入三视角 RGB、14 维关节及夹爪状态、模型推理与 CAN 控制。为桌面整理生成 1,000 条仿真示范，并按任务调整每次推理后实际执行的动作步数与阶段规则。</p>
-<p>团队以 77∶23 混采仿真和真机示范，微调 π0.5，部分任务另用真机数据续训。团队获<strong>仿真预赛第 3 名（共 47 队）</strong>，我负责的移液器任务获预赛单项综合第 1。</p>
+<p>团队以 77∶23 混采仿真和真机示范，微调 π0.5，部分任务另用真机数据续训。团队获<strong>仿真预赛第 3 名（共 47 队）</strong>，我负责的移液器任务获仿真预赛单项综合第 1。</p>
 <details id="team-report"><summary>团队技术报告 · 合成数据覆盖与 π0.5 两阶段适配</summary>
-<p>每项任务使用 1,000 条仿真轨迹和 60 条官方真机示范。专家脚本在部分摆位更容易成功，这些摆位在训练集中也就出现得更频繁。团队随机化物体位姿、相机和光照，再用 Qwen 离线筛选示范，使起始位置分布更均匀。</p>
+<p>每项任务使用 1,000 条仿真轨迹和 60 条官方真机示范。专家脚本在部分摆位更容易成功，这些摆位在训练集中也就出现得更频繁。团队随机化物体位姿、相机和光照，再用 Qwen 离线筛选示范，希望减少常见摆位在训练集中的占比。</p>
 <p>我们在部分边界摆位上观察到改善。仅用真机示范继续训练，有时会削弱策略对其他摆位的适应能力，因此只在部分任务上采用第二阶段。报告记录了这些定性观察。我是报告共同作者，负责十任务真机平台与部署，并为桌面整理生成仿真轨迹。</p></details>
+<details id="data-coverage"><summary>赛后数据复盘 · 搅拌器和烧杯能组成多少种摆位？</summary>
+<p>从一批 600 条搅拌器仿真示范中筛出 449 条后，烧杯和搅拌器各自的 25 个位置格都有样本。把两件物体放在一起看，原有的 309 种位置组合只剩下 271 种。图中每个橙色方格，都是筛选后消失的一种组合。</p>
+<figure class="viewer"><a href="./assets/project/mixer-layouts.webp"><img loading="lazy" width="1908" height="1007" style="width:100%;height:auto" src="./assets/project/mixer-layouts.webp" alt="两张单物体位置表均保留全部 25 格；按烧杯和搅拌器位置交叉统计，309 个组合中有 38 个在筛选后消失。"/></a><figcaption>同一批示范的两种统计方式。这里统计仿真初始摆位，策略在对应真机摆位上的成功率仍待评测。</figcaption></figure></details>
 <details id="competition-tasks"><summary>查看双臂平台支持的十项任务</summary>
 <ul>
 <li>按铃</li>
@@ -67,7 +70,7 @@
 <div class="links"><a href="#demo">46 秒真机演示</a><a href="#recordings">逐帧回放</a><a href="https://robosyn-bench.net/#/leaderboard">团队排名</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">移液器单项成绩</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">团队模型权重</a></div></div>
 </article>
 <article class="project" id="smart-car"><a class="art" href="https://www.bilibili.com/video/BV1eRfGBgEpp/"><img alt="智能汽车赛赛车的相机与电路" src="./assets/images/previews/car.webp"/></a>
-<div><p class="date">百度创意组 · 2023.05 – 2023.08</p><h3>全国大学生智能汽车竞赛</h3><p>获<strong>全国二等奖</strong>。我负责车端识别数据采集与模型部署。团队以知识蒸馏和剪枝优化 YOLOv3-MobileNetV3，推理从 3 FPS 提至 30 FPS。</p><p>高频发送控制指令时，车端偶发丢指令或解析错误。我调整串口收发协议，用 DMA 中断收发数据，并编写 Vue3 调参界面。界面经队友实现的 Flask 中转服务连接 STM32，支持看着实时图传调节 PID 参数。</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">赛车演示</a></div></div></article>
+<div><p class="date">百度创意组 · 2023.05 – 2023.08</p><h3>第十八届全国大学生智能汽车竞赛</h3><p>获<strong>全国二等奖</strong>。我负责车端识别数据采集与模型部署。团队以知识蒸馏和剪枝优化 YOLOv3-MobileNetV3，推理从 3 FPS 提至 30 FPS。</p><p>高频发送控制指令时，车端偶发丢指令或解析错误。我调整串口收发协议，用 DMA 中断收发数据，并编写 Vue3 调参界面。界面经队友实现的 Flask 中转服务连接 STM32，支持看着实时图传调节 PID 参数。</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">赛车演示</a></div></div></article>
 <article class="project"><a class="art" href="./assets/project/vla/cover.gif"><img alt="RoboTwin 双臂操作仿真画面" src="./assets/images/previews/openvla.webp"/></a>
 <div><p class="date">个人项目 · 2026</p><h3>OpenVLA-OFT · RoboTwin 双臂操作策略训练</h3>
 <p>我训练双臂策略拾起锤子、敲击随机摆放的方块。在 RoboTwin 生成约 500 条专家轨迹并转换为 RLDS，在四张 RTX 4090 上用 FSDP 和 LoRA 微调约 75 亿参数的模型，训练约 4 万步。</p>
@@ -104,7 +107,7 @@
 <section id="awards"><h2>获奖经历</h2><dl class="records">
 <dt>2026</dt><dd>RoboSynChallenge 仿真预赛第 3 名（47 队）。</dd>
 <dt>2025</dt><dd>小米大家电产品创新大赛季军。</dd>
-<dt>2023</dt><dd>全国大学生智能汽车竞赛全国二等奖。中国大学生服务外包创新创业大赛全国三等奖（项目负责人）。</dd>
+<dt>2023</dt><dd>全国大学生智能汽车竞赛全国二等奖。第十四届中国大学生服务外包创新创业大赛企业命题类全国三等奖（项目负责人）。</dd>
 <dt>2021</dt><dd>西南交通大学三等综合奖学金、优秀学生干部。</dd>
 </dl></section>
 </main>
