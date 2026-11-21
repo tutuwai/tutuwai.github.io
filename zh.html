@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>陈海崴 · 机器人操作与嵌入式系统</title>
+<meta content="陈海崴，中国科学院计算技术研究所硕士在读。研究机器人操作策略的训练与真机部署，曾在小米从事空调量产固件研发。" name="description"/>
+<meta content="陈海崴 · 机器人操作与嵌入式系统" property="og:title"/>
+<meta content="双臂机器人十任务平台、OpenVLA-OFT 策略训练、小米量产固件与全国智能汽车竞赛。" property="og:description"/>
+<meta content="https://tutuwai.github.io/assets/project/robosyn-table.webp" property="og:image"/>
+<link href="https://tutuwai.github.io/zh.html" hreflang="zh-CN" rel="alternate"/>
+<link href="https://tutuwai.github.io/" hreflang="en" rel="alternate"/>
+<link href="./assets/css/style.css?v=profile5" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="bar"><div class="container nav-inner"><a class="wordmark" href="#main">陈海崴</a><nav aria-label="主导航"><a href="#education">教育</a><a href="#experience">工作</a><a href="#projects">项目</a><a href="#awards">获奖</a><a class="language" href="./" hreflang="en" lang="en">English</a></nav></div></header>
+<main class="container" id="main">
+<header class="profile">
+<div class="profile-text"><h1>陈海崴 <span lang="en">Haiwei Chen</span></h1>
+<p class="position">中国科学院计算技术研究所 · 硕士研究生</p>
+<p>我搭建了覆盖<a href="#robosynchallenge">十项操作任务的双臂真机平台</a>，目前在找具身操作算法、Sim-to-Real 和真机强化学习方向的实习。读研前，我在<a href="#experience">小米</a>做量产固件，也为<a href="#smart-car">全国智能汽车竞赛</a>做过车端视觉、通信和遥测。</p>
+<div class="links contacts"><a class="primary" href="./Resume.pdf" lang="zh-CN">中文简历 PDF</a><a href="https://github.com/tutuwai">GitHub</a><a href="mailto:chenhaiwai@foxmail.com">邮箱</a><button id="show-wechat" type="button">微信</button></div>
+</div><img alt="陈海崴的个人照片" class="portrait" height="180" src="./assets/images/portrait.webp" width="180"/>
+</header>
+<section aria-labelledby="education-title" id="education"><h2 id="education-title">教育背景</h2>
+<div class="edu-grid"><article><h3>中国科学院计算技术研究所</h3><p>硕士在读，导师陈云霁</p><p class="date">2026.09 至今</p></article>
+<article><img alt="" class="school-logo" height="46" src="./assets/images/southwest-jiaotong-university-logo-1024px.png" width="46"/><h3>西南交通大学</h3><p>计算机与人工智能学院<br/>计算机科学与技术学士</p><p class="date">2020.09 – 2024.06</p></article></div>
+</section>
+<section aria-labelledby="work-title" id="experience"><h2 id="work-title">工作经历</h2>
+<div class="job"><img alt="" class="mi-logo" height="52" src="./assets/images/logo-mi2.png" width="52"/><div><h3>小米科技（武汉） · 嵌入式软件研发工程师</h3><p>大家电技术中台部</p></div><span class="date">2024.07 – 2025.04</span></div>
+<ul class="contributions">
+<li><strong>量产固件。</strong>主导两款 A 级量产项目的软件迭代与跨平台移植，参与首批出海空调研发。重构七个核心模块，解决包括 OTA 升级时序在内的四十余项固件缺陷。</li>
+<li><strong>双毫米波雷达。</strong>独立设计 MCU 串口协议，以分时调度抑制双雷达同频干扰，将两路检测目标转换到设备坐标系并去重，为空调风随人动提供位置输入。</li>
+<li><strong>软硬件联调。</strong>对多联机的 44 个 I/O 口和 760 条状态记录进行排查，定位三处底层缺陷，输出 16 份测试报告。</li>
+</ul>
+<div class="gallery">
+<a href="./assets/images/work/QQ2026219-18271.gif"><img alt="风随人动演示" src="./assets/images/previews/radar.webp"/><span>风随人动演示 ↗</span></a>
+<a href="./assets/images/work/QQ2026219-183840.gif"><img alt="空调固件 OTA 升级演示" src="./assets/images/previews/ota.webp"/><span>OTA 升级演示 ↗</span></a>
+<a href="./assets/images/work/PixPin_2026-02-19_18-43-06.png"><img alt="固件研发流程" src="./assets/images/previews/firmware.webp"/><span>研发流程 ↗</span></a>
+<a href="./assets/images/work/jijun.jpg"><img alt="小米产品创新大赛获奖照片" src="./assets/images/previews/innovation.webp"/><span>产品创新奖 ↗</span></a>
+</div>
+</section>
+<section aria-labelledby="project-title" id="projects"><h2 id="project-title">项目与比赛</h2>
+<article class="project" id="robosynchallenge">
+<a class="art" href="#recordings"><img alt="PiPER 整理桌面的顶视与腕部画面" src="./assets/project/robosyn-table.webp"/></a>
+<div><p class="date">NeurIPS 竞赛 · 2026.08 – 2026.11</p><h3>RoboSynChallenge · 十任务双臂操作与真机部署</h3>
+<p>我搭建了覆盖十项任务的 PiPER 双臂真机部署与评测平台，接入三视角 RGB、14 维关节及夹爪状态、模型推理与 CAN 控制。为桌面整理生成 1,000 条仿真示范，并按任务调整每次推理后实际执行的动作步数与阶段规则。</p>
+<p>团队以 77∶23 混采仿真和真机示范，微调 π0.5，部分任务另用真机数据续训。团队获<strong>仿真预赛第 3 名（共 47 队）</strong>，我负责的移液器任务获预赛单项综合第 1。</p>
+<details id="competition-tasks"><summary>查看双臂平台支持的十项任务</summary>
+<ul>
+<li>按铃</li>
+<li>桌面整理</li>
+<li>倒水</li>
+<li>装盒提篮</li>
+<li>物件交接入筒</li>
+<li>开抽屉放物</li>
+<li>操作搅拌器</li>
+<li>双臂装配</li>
+<li>操作移液器</li>
+<li>样品插架</li>
+</ul>
+</details>
+<div class="links"><a href="#recordings">看真机回放</a><a href="https://robosyn-bench.net/#/leaderboard">团队排名</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">移液器单项成绩</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">团队模型权重</a></div></div>
+</article>
+<article class="project" id="smart-car"><a class="art" href="https://www.bilibili.com/video/BV1eRfGBgEpp/"><img alt="智能汽车赛赛车的相机与电路" src="./assets/images/previews/car.webp"/></a>
+<div><p class="date">百度创意组 · 2023.05 – 2023.08</p><h3>全国大学生智能汽车竞赛</h3><p>获<strong>全国二等奖</strong>。我在车端部署 YOLOv3-MobileNetV3，经知识蒸馏与剪枝将推理速度从 3 FPS 提至 30 FPS。用 DMA、串口空闲中断和 CRC 做数据接收与校验，开发 Vue 和 Flask 遥测平台，支持 Wi-Fi 图传与 PID 参数在线调节。</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">赛车演示</a></div></div></article>
+<article class="project"><a class="art" href="./assets/project/vla/cover.gif"><img alt="RoboTwin 双臂操作仿真画面" src="./assets/images/previews/openvla.webp"/></a>
+<div><p class="date">个人项目 · 2026</p><h3>OpenVLA-OFT · RoboTwin 双臂操作策略训练</h3>
+<p>我训练双臂策略拾起锤子、敲击随机摆放的方块。在 RoboTwin 生成约 500 条专家轨迹并转换为 RLDS，在四张 RTX 4090 上用 FSDP 和 LoRA 微调约 75 亿参数的模型，训练约 4 万步。</p>
+<p>排查机械臂接近方块时重复动作的问题时，我发现原先 25 步动作窗口的采样方式会丢掉长轨迹末尾的 24 个观测起点。我保留这些起点，用最后一个有效动作补齐越界标签。</p>
+<div class="links"><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning">训练代码</a><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning/blob/56dfd56edae0aa235b73158e913f3ba2792f05f7/assets/files/%E4%BC%98%E5%8C%96%E5%89%8D.gif">修改前回放</a><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning/blob/56dfd56edae0aa235b73158e913f3ba2792f05f7/assets/files/%E4%BC%98%E5%8C%96%E5%90%8E.gif">修改后回放</a><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning/blob/56dfd56edae0aa235b73158e913f3ba2792f05f7/envs/beat_block_hammer.py#L82-L87">任务成功判据</a></div></div></article>
+<article class="project"><a class="art" href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf"><img alt="产业链知识图谱交互界面" loading="lazy" src="./assets/images/previews/graph.webp"/></a>
+<div><p class="date">本科毕业设计</p><h3>产业链知识图谱</h3><p>使用 Django 与 Neo4j 搭建产业链关系查询系统，以 Python 处理数据，用 Vue 实现关系图谱的交互展示。</p><div class="links"><a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf">答辩材料</a><a href="https://github.com/tutuwai/industry-knowledge-graph-neo4j">项目代码</a><a href="https://www.bilibili.com/video/BV1bwfVBvEZx/">系统演示</a></div></div></article>
+<article class="project"><a class="art" href="https://www.bilibili.com/video/BV1YRfGBgE7h/"><img alt="履带式清洁机器人样机" loading="lazy" src="./assets/images/previews/crawler.webp"/></a>
+<div><p class="date">大学生创新项目</p><h3>地铁浮置板清洁机器人</h3><p>担任电控负责人，设计集成电机驱动与 Wi-Fi 通信的 ESP32 主控板，实现地铁浮置板下清洁机器人样机的远程行走控制。</p><div class="links"><a href="https://www.bilibili.com/video/BV1YRfGBgE7h/">样机演示</a></div></div></article>
+<article class="hil-note"><h3>HIL-SERL · PiPER 齿轮插入适配</h3><p>将 Franka 齿轮插入基线适配到 PiPER。采集 19 条示范，转换为 3,740 条状态转移，验证回放采样和 JAX 学习器离线加载。为减少夹爪仍托住齿轮时的误判，在真机上验证了视觉奖励、夹爪开度与连续三帧联合判定。</p></article>
+<details id="recordings"><summary>查看三项任务的真机回放</summary>
+<figure class="viewer">
+<div class="viewer-stage"><img alt="双臂围绕盘子整理餐具的顶视与腕部画面" height="480" id="still" src="./assets/project/robosyn-table.webp" width="960"/><canvas aria-label="PiPER 真机评测的三机位同步画面" height="384" hidden="" id="sequence" role="img" width="768"></canvas></div>
+<div class="viewer-controls" hidden="" id="controls">
+<div aria-label="选择回放任务" class="tasks" role="group"><button aria-pressed="true" data-task="table" type="button">桌面整理</button><button aria-pressed="false" data-task="basket" type="button">装盒提篮</button><button aria-pressed="false" data-task="bell" type="button">按铃</button></div>
+<div class="scrub"><label for="frame">回放帧</label><input id="frame" max="11" min="0" step="1" type="range" value="8"/><output for="frame" id="frame-time">28.1 s</output></div>
+</div>
+<figcaption>真机评测录像 · 一路顶视、两路腕部视角</figcaption>
+</figure></details>
+</section>
+<section id="patents"><h2>发明专利</h2><dl class="records">
+<dt>CN120466783B</dt><dd><strong>第一发明人 · 已授权。</strong>空调静默 OTA 升级。根据历史运行与环境数据预测空闲时段，再根据控制指令动态调整升级窗口。</dd>
+<dt>CN120751358A</dt><dd><strong>第一发明人 · 已公开。</strong>空调控制参数升级。终端通过 NFC 下发控制参数，经数据包校验后写入。</dd>
+</dl></section>
+<section id="skills"><h2>技术能力</h2><dl class="records">
+<dt>机器人学习</dt><dd>Python、PyTorch、JAX、RoboTwin、RLDS、FSDP、LoRA。操作策略训练、示范数据处理与 PiPER 真机部署。</dd>
+<dt>嵌入式系统</dt><dd>C/C++、Linux、FreeRTOS、STM32、ESP32。CAN、UART、I²C、SPI 通信与逻辑分析仪调试，Altium Designer 电路板设计。</dd>
+</dl></section>
+<section id="awards"><h2>获奖经历</h2><dl class="records">
+<dt>2026</dt><dd>RoboSynChallenge 仿真预赛第 3 名（47 队）。</dd>
+<dt>2025</dt><dd>小米大家电产品创新大赛季军。</dd>
+<dt>2023</dt><dd>全国大学生智能汽车竞赛全国二等奖。中国大学生服务外包创新创业大赛全国三等奖（项目负责人）。</dd>
+<dt>2021</dt><dd>西南交通大学三等综合奖学金、优秀学生干部。</dd>
+</dl></section>
+</main>
+<footer class="container"><span>陈海崴 · 2026 年 11 月</span><a href="mailto:chenhaiwai@foxmail.com">chenhaiwai@foxmail.com</a></footer>
+<dialog aria-labelledby="wechat-title" id="wechat"><div class="dialog-head"><h2 id="wechat-title">微信</h2><button id="close-wechat" type="button">关闭</button></div><img alt="用微信扫码联系陈海崴" height="300" src="./assets/images/wechat.jpg" width="260"/></dialog>
+<script defer="" src="./assets/sequence.js?v=2"></script>
+<script defer="" src="./assets/profile.js"></script>
+</body></html>

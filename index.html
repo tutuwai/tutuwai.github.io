@@ -7,16 +7,18 @@
   <meta property="og:title" content="Haiwei Chen · Robotics and embedded systems">
   <meta property="og:description" content="Selected projects, industry experience and education.">
   <meta property="og:image" content="https://tutuwai.github.io/assets/project/robosyn-table.webp">
-  <link rel="stylesheet" href="./assets/css/style.css?v=profile4">
+  <link rel="alternate" hreflang="zh-CN" href="https://tutuwai.github.io/zh.html">
+  <link rel="alternate" hreflang="en" href="https://tutuwai.github.io/">
+  <link rel="stylesheet" href="./assets/css/style.css?v=profile5">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="bar"><div class="container nav-inner"><a class="wordmark" href="#main">Haiwei Chen</a><nav aria-label="Main"><a href="#education">Education</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#awards">Awards</a></nav></div></header>
+<header class="bar"><div class="container nav-inner"><a class="wordmark" href="#main">Haiwei Chen</a><nav aria-label="Main"><a href="#education">Education</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#awards">Awards</a><a class="language" lang="zh-CN" hreflang="zh-CN" href="./zh.html">中文</a></nav></div></header>
 <main class="container" id="main">
   <header class="profile">
     <div class="profile-text"><h1>Haiwei Chen <span lang="zh-CN">陈海崴</span></h1>
       <p class="position">MSc student · Institute of Computing Technology, Chinese Academy of Sciences</p>
-      <p>I work on robot manipulation, from training vision–language–action policies to testing them on real arms. Before graduate school I developed production firmware at <a href="#experience">Xiaomi</a>. I also implemented on-device vision and telemetry for a <a href="#smart-car">competition vehicle</a>.</p>
+      <p>I work on robot manipulation, from training vision–language–action policies to testing them on a <a href="#robosynchallenge">two-arm platform I built for ten manipulation tasks</a>. Before graduate school I developed production firmware at <a href="#experience">Xiaomi</a>. I also implemented on-device vision and telemetry for a <a href="#smart-car">competition vehicle</a>.</p>
       <div class="links contacts"><a class="primary" href="./Resume.pdf" lang="zh-CN">中文简历 PDF</a><a href="https://github.com/tutuwai">GitHub</a><a href="mailto:chenhaiwai@foxmail.com">Email</a><button id="show-wechat" type="button">WeChat</button></div>
     </div><img class="portrait" src="./assets/images/portrait.webp" width="180" height="180" alt="Haiwei Chen outdoors at night">
   </header>
@@ -100,22 +102,7 @@
 </main>
 <footer class="container"><span>Haiwei Chen · November 2026</span><a href="mailto:chenhaiwai@foxmail.com">chenhaiwai@foxmail.com</a></footer>
 <dialog id="wechat" aria-labelledby="wechat-title"><div class="dialog-head"><h2 id="wechat-title">WeChat</h2><button type="button" id="close-wechat">Close</button></div><img width="260" height="300" src="./assets/images/wechat.jpg" alt="Scan with WeChat to contact Haiwei Chen"></dialog>
-<script src="./assets/sequence.js" defer></script>
-<script>
-  const wechat = document.getElementById('wechat');
-  const recordings = document.getElementById('recordings');
-  function openLinkedSection() {
-    if (location.hash === '#recordings') recordings.open = true;
-    if (location.hash === '#competition-tasks') document.getElementById('competition-tasks').open = true;
-  }
-  document.querySelectorAll('a[href="#recordings"]').forEach(link =>
-    link.addEventListener('click', () => { recordings.open = true; })
-  );
-  window.addEventListener('hashchange', openLinkedSection);
-  openLinkedSection();
-  document.getElementById('show-wechat').addEventListener('click', () => wechat.showModal());
-  document.getElementById('close-wechat').addEventListener('click', () => wechat.close());
-  wechat.addEventListener('click', event => { if (event.target === wechat) wechat.close(); });
-</script>
+<script src="./assets/sequence.js?v=2" defer></script>
+<script src="./assets/profile.js" defer></script>
 
 </body></html>

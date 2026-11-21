@@ -26,6 +26,9 @@ nav a,.wordmark,.links a,.links button { font-weight:600; text-decoration:none; 
 nav a,.links { font-size:.9rem; }
 nav a:hover,.links a:hover,.links button:hover { text-decoration:underline; }
 .wordmark { color:var(--ink); }
+.language { border-inline-start:1px solid var(--line); padding-inline-start:12px; }
+html:lang(zh) .profile-text > p,html:lang(zh) .project p,html:lang(zh) .contributions { line-height:1.75; }
+html:lang(zh) h1,html:lang(zh) h2,html:lang(zh) h3 { letter-spacing:normal; }
 .profile { display:grid; grid-template-columns:minmax(0,1fr) 164px; gap:clamp(20px,7vw,86px); align-items:center; padding:32px 0 27px; }
 .portrait { border-radius:50%; width:164px; height:164px; object-fit:cover; object-position:50% 43%; border:3px solid #d7eaf6; }
 h1 { font-size:clamp(2.35rem,4vw,3.15rem); line-height:1.09; font-weight:650; color:var(--ink); letter-spacing:-.05em; }
