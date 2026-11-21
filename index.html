@@ -1,89 +1,103 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <meta property="og:title" content="Haiwei Chen · Robot learning">
-  <meta property="og:description" content="Bimanual manipulation, VLA training and real-robot experiments.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haiwei Chen 陈海崴 · Robotics and embedded systems</title>
+  <meta name="description" content="Haiwei Chen, MSc student at ICT, Chinese Academy of Sciences. Robot learning, Xiaomi embedded systems, and the National Intelligent Vehicle Competition.">
+  <meta property="og:title" content="Haiwei Chen · Robotics and embedded systems">
+  <meta property="og:description" content="Selected projects, industry experience and education.">
   <meta property="og:image" content="https://tutuwai.github.io/assets/project/robosyn-table.webp">
-  <meta name="description" content="Haiwei Chen (陈海崴), MSc student at ICT, Chinese Academy of Sciences. Bimanual manipulation, VLA policy training and real-robot evaluation.">
-  <title>Haiwei Chen 陈海崴 · Robot learning</title>
-  <link rel="stylesheet" href="./assets/css/style.css?v=3">
+  <link rel="stylesheet" href="./assets/css/style.css?v=profile4">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="mast"><div class="wrap mast-inner">
-  <a class="signature" href="#main">Haiwei Chen <span lang="zh-CN">陈海崴</span></a>
-  <nav aria-label="Portfolio"><a href="#projects">Projects</a><a href="#experience">Experience</a><a class="nav-cv" href="./Resume.pdf" lang="zh-CN">中文简历 <span aria-hidden="true">↗</span></a></nav>
-</div></header>
-<main id="main" class="wrap">
-  <aside class="intro" aria-labelledby="name">
-    <img class="portrait" src="./assets/images/portrait.webp" width="115" height="144" alt="Haiwei Chen">
-    <h1 id="name">Haiwei Chen <span lang="zh-CN">陈海崴</span></h1>
-    <p class="profile-role">MSc student in robot learning</p>
-    <p class="affiliation">Institute of Computing Technology,<br> Chinese Academy of Sciences</p>
-    <p class="bio">I train manipulation policies and build the systems that let me test them on real arms. Previously, I developed embedded firmware at Xiaomi.</p>
-    <div class="links intro-links"><a class="button" href="./Resume.pdf" lang="zh-CN">中文简历 ↗</a><a href="https://github.com/tutuwai">GitHub</a><a href="mailto:chenhaiwai@foxmail.com">Email</a><button id="show-wechat" type="button">WeChat</button></div>
-  </aside>
-  <div class="work-column">
-  <section id="projects" aria-labelledby="projects-title">
-    <h2 class="section-label" id="projects-title">Selected work</h2>
-    <article class="feature" id="robosynchallenge">
-      <p class="metadata">Bimanual manipulation <span> / </span> NeurIPS competition 2026</p>
-      <h3>RoboSynChallenge</h3>
-      <p class="feature-intro">One PiPER platform for ten manipulation tasks. I built the deployment stack and led the pipette policy.</p>
-      <figure class="viewer">
+<header class="bar"><div class="container nav-inner"><a class="wordmark" href="#main">Haiwei Chen</a><nav aria-label="Main"><a href="#education">Education</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#awards">Awards</a></nav></div></header>
+<main class="container" id="main">
+  <header class="profile">
+    <div class="profile-text"><h1>Haiwei Chen <span lang="zh-CN">陈海崴</span></h1>
+      <p class="position">MSc student · Institute of Computing Technology, Chinese Academy of Sciences</p>
+      <p>I work on robot manipulation, from training vision–language–action policies to testing them on real arms. Before graduate school I developed production firmware at <a href="#experience">Xiaomi</a>. I also implemented on-device vision and telemetry for a <a href="#smart-car">competition vehicle</a>.</p>
+      <div class="links contacts"><a class="primary" href="./Resume.pdf" lang="zh-CN">中文简历 PDF</a><a href="https://github.com/tutuwai">GitHub</a><a href="mailto:chenhaiwai@foxmail.com">Email</a><button id="show-wechat" type="button">WeChat</button></div>
+    </div><img class="portrait" src="./assets/images/portrait.webp" width="180" height="180" alt="Haiwei Chen outdoors at night">
+  </header>
+  <section id="education" aria-labelledby="education-title"><h2 id="education-title">Education</h2>
+    <div class="edu-grid"><article><h3>Institute of Computing Technology, CAS</h3><p>Master’s student · Advisor: Yunji Chen</p><p class="date">Sep 2026 – present</p></article>
+    <article><img src="./assets/images/southwest-jiaotong-university-logo-1024px.png" class="school-logo" width="46" height="46" alt=""><h3>Southwest Jiaotong University</h3><p>Bachelor’s degree in Computer Science and Technology</p><p class="date">Sep 2020 – Jun 2024</p></article></div>
+  </section>
+  <section id="experience" aria-labelledby="work-title"><h2 id="work-title">Work experience</h2>
+    <div class="job"><img class="mi-logo" src="./assets/images/logo-mi2.png" alt="" width="52" height="52"><div><h3>Xiaomi · Embedded Software Engineer</h3><p>Home Appliances Software Platform · Wuhan</p></div><span class="date">Jul 2024 – Apr 2025</span></div>
+    <ul class="contributions">
+      <li><strong>Production firmware.</strong> Led software iteration and cross-platform migration for two A-grade production projects and contributed to Xiaomi’s first overseas AC line. Reworked seven core modules and resolved more than 40 firmware defects, including OTA timing issues.</li>
+      <li><strong>Dual-radar sensing.</strong> Designed the MCU serial protocol for two millimeter-wave radars. Time-shared the sensors to reduce interference, transformed detections into device coordinates and merged duplicates for person-following airflow.</li>
+      <li><strong>Hardware validation.</strong> Traced three low-level defects from 760 records across 44 I/O ports on a multi-split AC system and delivered 16 test reports.</li>
+    </ul>
+    <div class="gallery">
+      <a href="./assets/images/work/QQ2026219-18271.gif"><img src="./assets/images/previews/radar.webp" alt="Air-conditioner airflow product demonstration"><span>Airflow demo ↗</span></a>
+      <a href="./assets/images/work/QQ2026219-183840.gif"><img src="./assets/images/previews/ota.webp" alt="Over-the-air software update demonstration"><span>OTA demo ↗</span></a>
+      <a href="./assets/images/work/PixPin_2026-02-19_18-43-06.png"><img src="./assets/images/previews/firmware.webp" alt="Firmware development workflow"><span>Engineering workflow ↗</span></a>
+      <a href="./assets/images/work/jijun.jpg"><img src="./assets/images/previews/innovation.webp" alt="Xiaomi product innovation award"><span>Innovation award ↗</span></a>
+    </div>
+  </section>
+
+  <section id="projects" aria-labelledby="project-title"><h2 id="project-title">Featured projects</h2>
+    <article class="project" id="robosynchallenge">
+      <a href="#recordings" class="art"><img src="./assets/project/robosyn-table.webp" alt="Overhead and wrist views of PiPER arranging cutlery"></a>
+      <div><p class="date">NeurIPS competition · Aug – Nov 2026</p><h3>RoboSynChallenge · Ten-task bimanual manipulation</h3>
+      <p>I built the PiPER deployment and evaluation system for all ten tasks, synchronizing three RGB views, 14-dimensional robot state and CAN commands. I generated 1,000 simulation demonstrations for table rearrangement and tuned how many actions the arms executed before replanning.</p>
+      <p>Our team fine-tuned π0.5 on a 77:23 mix of simulated and real demonstrations, with a second real-data stage on selected tasks. We placed <strong>3rd of 47 teams in the simulation preliminaries</strong>. The pipette task I led ranked first by overall score.</p>
+      <div class="links"><a href="#recordings">Real-robot frames</a><a href="https://robosyn-bench.net/#/leaderboard">Team standings</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">Task score</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">Team checkpoints</a></div></div>
+    </article>
+    <article class="project" id="smart-car"><a class="art" href="https://www.bilibili.com/video/BV1eRfGBgEpp/"><img src="./assets/images/previews/car.webp" alt="Competition vehicle with its camera, electronics and wiring"></a>
+      <div><p class="date">Baidu Creative Track · May – Aug 2023</p><h3>National Intelligent Vehicle Competition</h3><p><strong>National second prize.</strong> I deployed YOLOv3-MobileNetV3 on the car and used knowledge distillation and pruning to raise inference from 3 to 30 FPS. I implemented DMA-based UART reception, idle-line detection and CRC checking, and built Vue and Flask telemetry for Wi-Fi video and live PID tuning.</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">Watch the vehicle</a></div></div></article>
+    <article class="project"><a class="art" href="./assets/project/vla/cover.gif"><img src="./assets/images/previews/openvla.webp" alt="RoboTwin simulation views from a bimanual manipulation episode"></a>
+      <div><p class="date">Independent project · 2026</p><h3>OpenVLA-OFT on RoboTwin</h3><p>I generated about 500 randomized expert trajectories, converted them to RLDS and fine-tuned the policy on four RTX 4090 GPUs with LoRA and FSDP. I fixed a 25-step action window that discarded the final 24 observation starts of each long episode.</p><div class="links"><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning">Training code</a><a href="./assets/project/vla/cover.gif">Simulation demo</a></div></div></article>
+    <article class="project"><a class="art" href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf"><img src="./assets/images/previews/graph.webp" loading="lazy" alt="Interactive industry knowledge graph interface"></a>
+      <div><p class="date">Undergraduate thesis</p><h3>Industry knowledge graph</h3><p>I built a Django and Neo4j system for exploring industry-chain relationships, with Python data processing and an interactive Vue frontend.</p><div class="links"><a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf">Defense slides</a><a href="https://github.com/tutuwai/industry-knowledge-graph-neo4j">Code</a><a href="https://www.bilibili.com/video/BV1bwfVBvEZx/">Demo</a></div></div></article>
+    <article class="project"><a class="art" href="https://www.bilibili.com/video/BV1YRfGBgE7h/"><img loading="lazy" src="./assets/images/previews/crawler.webp" alt="Tracked metro-cleaning robot prototype"></a>
+      <div><p class="date">Undergraduate innovation project</p><h3>Metro floating-slab cleaning robot</h3><p>As electrical control lead, I designed an ESP32 main board integrating motor drivers and Wi-Fi for remotely steering the prototype beneath floating slabs.</p><div class="links"><a href="https://www.bilibili.com/video/BV1YRfGBgE7h/">Robot demo</a></div></div></article>
+    <article class="hil-note"><h3>HIL-SERL on PiPER</h3><p>I adapted the Franka baseline for gear insertion. I converted 19 demonstrations into 3,740 replay transitions, checked offline learner loading and validated the visual reward on hardware using gripper state and a three-frame check.</p></article>
+    <details id="recordings"><summary>Explore real-robot recordings · three tasks, three camera views</summary>
+    <figure class="viewer">
         <div class="viewer-stage"><img id="still" src="./assets/project/robosyn-table.webp" width="960" height="480" alt="Overhead and wrist views of two arms arranging cutlery around a plate."><canvas id="sequence" width="768" height="384" hidden role="img" aria-label="Selected frame from a real PiPER evaluation, shown from three cameras."></canvas></div>
         <div class="viewer-controls" id="controls" hidden>
           <div class="tasks" role="group" aria-label="Choose a real-robot task"><button type="button" data-task="table" aria-pressed="true">Table setting</button><button type="button" data-task="basket" aria-pressed="false">Basket</button><button type="button" data-task="bell" aria-pressed="false">Bell</button></div>
           <div class="scrub"><label for="frame">Frame</label><input id="frame" type="range" min="0" max="11" value="8" step="1"><output id="frame-time" for="frame">28.1 s</output></div>
         </div>
         <figcaption>Real-robot evaluation · overhead camera and two wrist cameras</figcaption>
-      </figure>
-      <div class="result-row"><strong>3<small> / 47</small></strong><span>Team rank<br>simulation preliminaries</span><strong>1<small>st</small></strong><span>Pipette task<br>overall score</span></div>
-      <p>For pipette manipulation, I used the learned policy for grasping and approach, then switched to tracking and alignment for the final press. The policy succeeded in 84 of 100 official simulation trials. On the real rig, synchronized video, policy commands and joint feedback let us pinpoint execution failures.</p>
-      <div class="links"><a href="https://robosyn-bench.net/#/leaderboard">Team leaderboard ↗</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">Pipette results ↗</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">Checkpoints ↗</a></div>
-    </article>
-    <div class="project-pair">
-      <article class="project"><p class="metadata">Imitation learning · Personal project</p><h3>OpenVLA-OFT on RoboTwin</h3>
-      <p>I generated about 500 randomized expert demonstrations, converted them to RLDS and fine-tuned OpenVLA with LoRA and FSDP on four RTX 4090s. A 25-step action window was dropping the final 24 observation starts of long episodes. I restored those examples by padding targets with the last valid action.</p>
-      <div class="links"><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning">Code and training notes</a><a href="./assets/project/vla/cover.gif">Simulation demo</a></div></article>
-      <article class="project"><p class="metadata">Real-robot reinforcement learning</p><h3>HIL-SERL on PiPER</h3>
-      <p>I adapted the Franka-based setup for gear insertion on PiPER. I converted 19 demonstrations into 3,740 replay transitions and verified that the offline learner could load them. To address false successes while the gripper still held the gear, I combined the visual reward with gripper opening and a three-frame check on hardware.</p>
-      </article>
-    </div>
+      </figure></details>
   </section>
-
-  <section id="experience" aria-labelledby="exp-title">
-    <h2 id="exp-title" class="section-label">Experience &amp; education</h2>
-    <div class="timeline"><p class="metadata">Sep 2026 – present</p><div><h3>Institute of Computing Technology, CAS</h3><p>Master’s student · Advisor: Prof. Yunji Chen</p></div></div>
-    <div class="timeline"><p class="metadata">Jul 2024 – Apr 2025</p><div><h3>Xiaomi · Embedded Software Engineer</h3>
-      <p>Developed firmware for production air conditioners in Wuhan. Reworked seven core modules, resolved more than 40 firmware issues and designed a serial protocol for dual millimeter-wave radar sensing.</p>
-      <p>First inventor on a granted patent for scheduling firmware updates in idle windows (<strong>CN120466783B</strong>) and a published application for NFC-based control parameter updates (<strong>CN120751358A</strong>).</p>
-      <details><summary>Product development &amp; demos</summary><p>Supported the first overseas AC line. Validated 44 I/O ports against 760 records and traced three low-level defects. Placed third in Xiaomi’s home-appliance product innovation competition.</p><div class="links"><a href="./assets/images/work/QQ2026219-18271.gif">Product demo 1</a><a href="./assets/images/work/QQ2026219-183840.gif">Product demo 2</a><a href="./assets/images/work/PixPin_2026-02-19_18-43-06.png">Product screenshot</a><a href="./assets/images/work/jijun.jpg">Award</a></div></details>
-    </div></div>
-    <div class="timeline"><p class="metadata">Sep 2020 – Jun 2024</p><div><h3>Southwest Jiaotong University</h3><p>Bachelor’s degree · Computer Science and Technology</p></div></div>
-  </section>
-
-  <section class="earlier" aria-labelledby="earlier-title"><h2 id="earlier-title" class="section-label">Earlier work &amp; awards</h2>
-    <div class="timeline"><p class="metadata">Embedded vision</p><div><h3>National Intelligent Vehicle Competition</h3>
-    <p>National second prize, Baidu Creative Track. Used distillation and pruning to raise on-device inference from 3 to 30 FPS, and built vehicle telemetry for debugging steering and control.</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">Vehicle demo</a></div></div></div>
-    <details><summary>Other projects &amp; honors</summary>
-    <p><strong>Industry knowledge graph.</strong> Built a Django and Neo4j system for exploring industry relationships, with a Vue frontend.</p><div class="links"><a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf">Thesis slides</a><a href="https://github.com/tutuwai/industry-knowledge-graph-neo4j">Repository</a><a href="https://www.bilibili.com/video/BV1bwfVBvEZx/">Demo</a></div>
-    <p><strong>Metro cleaning robot.</strong> Led electrical control and designed an ESP32 board for remote motion control beneath floating slabs.</p><div class="links"><a href="https://www.bilibili.com/video/BV1YRfGBgE7h/">Robot demo</a></div>
-    <p>National third prize, China University Service Outsourcing Innovation Competition. SWJTU comprehensive scholarship and excellent student cadre award.</p></details>
-  </section>
-  </div>
+  <section id="patents"><h2>Patents</h2><dl class="records">
+    <dt>CN120466783B</dt><dd><strong>Granted · first inventor.</strong> Selecting a quiet OTA update window for an air conditioner using operating history, environmental data and incoming controls.</dd>
+    <dt>CN120751358A</dt><dd><strong>Published application · first inventor.</strong> Writing control parameters through NFC and validating the packet before applying the update.</dd>
+  </dl></section>
+  <section id="skills"><h2>Technical skills</h2><dl class="records">
+    <dt>Robot learning</dt><dd>Python, PyTorch, JAX, RoboTwin, RLDS, FSDP and LoRA; policy training, demonstration processing and PiPER deployment.</dd>
+    <dt>Embedded systems</dt><dd>C/C++, Linux, FreeRTOS, STM32 and ESP32; CAN, UART, I²C and SPI; logic-analyzer debugging and PCB design in Altium Designer.</dd>
+  </dl></section>
+  <section id="awards"><h2>Awards &amp; honors</h2><dl class="records">
+    <dt>2026</dt><dd>RoboSynChallenge simulation preliminaries · team third place out of 47.</dd>
+    <dt>2025</dt><dd>Xiaomi Home Appliances Product Innovation Competition · third place.</dd>
+    <dt>2023</dt><dd>National Intelligent Vehicle Competition · national second prize. China University Service Outsourcing Innovation Competition · national third prize, project lead.</dd>
+    <dt>2021</dt><dd>Southwest Jiaotong University · comprehensive scholarship (third class) and excellent student cadre.</dd>
+  </dl></section>
 </main>
-<footer class="wrap"><span>Haiwei Chen · November 2026</span><a href="mailto:chenhaiwai@foxmail.com">chenhaiwai@foxmail.com</a></footer>
+<footer class="container"><span>Haiwei Chen · November 2026</span><a href="mailto:chenhaiwai@foxmail.com">chenhaiwai@foxmail.com</a></footer>
 <dialog id="wechat" aria-labelledby="wechat-title"><div class="dialog-head"><h2 id="wechat-title">WeChat</h2><button type="button" id="close-wechat">Close</button></div><img width="260" height="300" src="./assets/images/wechat.jpg" alt="Scan with WeChat to contact Haiwei Chen"></dialog>
 <script src="./assets/sequence.js" defer></script>
 <script>
   const wechat = document.getElementById('wechat');
+  const recordings = document.getElementById('recordings');
+  function showLinkedRecording() {
+    if (location.hash === '#recordings') recordings.open = true;
+  }
+  document.querySelectorAll('a[href="#recordings"]').forEach(link =>
+    link.addEventListener('click', () => { recordings.open = true; })
+  );
+  window.addEventListener('hashchange', showLinkedRecording);
+  showLinkedRecording();
   document.getElementById('show-wechat').addEventListener('click', () => wechat.showModal());
   document.getElementById('close-wechat').addEventListener('click', () => wechat.close());
   wechat.addEventListener('click', event => { if (event.target === wechat) wechat.close(); });
 </script>
-</body>
-</html>
+
+</body></html>
