@@ -1,271 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Haiwei Chen's Personal Website</title>
-    <meta name="description" content="Computer Science Student | Embodied AI | Embedded Systems Background">
-
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f1">
+  <meta name="description" content="Haiwei Chen (陈海崴), MSc student at ICT, Chinese Academy of Sciences. Bimanual manipulation, VLA policy training and real-robot evaluation.">
+  <title>Haiwei Chen 陈海崴 · Robot learning</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
-    <main class="page-content">
-        <div class="container">
-            <!-- 个人信息头部 -->
-            <div class="profile-header">
-                <table class="profile-table">
-                    <tr>
-                        <td class="profile-info">
-                            <h1 class="name">Haiwei Chen<span class="chinese-name">（陈海崴）</span></h1>
-                            <div class="badges">
-                                <img src="https://img.shields.io/badge/%F0%9F%8E%93-Computer%20Science%20Student-blue?style=flat-square" alt="Student Badge">
-                                <img src="https://img.shields.io/badge/%F0%9F%A6%BE-Embodied%20AI-green?style=flat-square" alt="Embodied AI Badge">
-                                <img src="https://img.shields.io/badge/%F0%9F%92%BB-Embedded%20Engineer-orange?style=flat-square" alt="Engineer Badge">
-                                <img src="https://img.shields.io/badge/%F0%9F%9A%97-Firmware%20%26%20OTA-red?style=flat-square" alt="Firmware Badge">
-                                <img src="https://img.shields.io/badge/%F0%9F%93%8A-Python%20%7C%20C%2FC%2B%2B-purple?style=flat-square" alt="Skills Badge">
-                            </div>
-
-                            <div class="status-updates">
-                                <p style="color: #3498db; margin: 0.3rem 0; font-size: 0.95rem;">📚 Preparing for graduate study in embodied intelligence</p>
-                                <p style="color: #3498db; margin: 0.3rem 0; font-size: 0.95rem;">🎓 Former Embedded Software Engineer at Xiaomi Home Appliances</p>
-                                <p style="color: #3498db; margin: 0.3rem 0; font-size: 0.95rem;">🚀 Focused on practical AI systems for real-world products</p>
-                            </div>
-
-                            <div class="contact-links" style="display: flex; align-items: center; gap: 0.5rem;">
-                                <a href="mailto:chenhaiwai@foxmail.com" title="Email" style="display: inline-flex; align-items: center; font-size: 20px;">✉️</a>
-                                <a href="https://github.com/tutuwai" title="GitHub" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg>
-                                </a>
-                                <a href="javascript:void(0)" title="WeChat" onclick="openWechatModal()" style="display: inline-flex; align-items: center;">
-                                    <img src="./assets/images/wechat.png" alt="WeChat" width="20" height="20">
-                                </a>
-                                <a href="./Resume.pdf" title="Resume PDF" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center;">📄</a>
-                            </div>
-                        </td>
-                        <td class="profile-avatar">
-                            <img src="./assets/images/头像.jpg" alt="Haiwei Chen" class="avatar-img">
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Biography -->
-            <div class="biography" style="margin-top: 2rem;">
-                <h2 class="section-title">About Me</h2>
-                <p>
-                    Hello, I am <strong>Haiwei Chen</strong>, a Computer Science graduate from Southwest Jiaotong University.
-                    After graduation, I worked as an embedded software engineer in Xiaomi's home appliances team.
-                    I am currently preparing for graduate study, focusing on embodied intelligence.
-                </p>
-                <p>
-                    During university, I built a solid foundation in software engineering and participated in multiple
-                    competitions and innovation projects. I received a national second prize in an intelligent vehicle
-                    competition and a national third prize in a service outsourcing innovation competition.
-                </p>
-                <p>
-                    At Xiaomi, I contributed to core product development, including overseas product delivery,
-                    software upgrades, reliability testing, and smart control modules. I also filed two invention patents
-                    and gained end-to-end experience from requirements to implementation and validation.
-                </p>
-                <p>
-                    I enjoy hands-on engineering and fast learning. My long-term goal is to build reliable,
-                    intelligent systems that connect software, hardware, and real-world applications.
-                </p>
-            </div>
-
-            <!-- Education Background -->
-            <section class="education">
-                <h2 class="section-title">Education</h2>
-
-                <div class="education-item">
-                    <table class="institution-table work-table">
-                        <tr>
-                            <td class="institution-logo">
-                                <img src="./assets/images/southwest-jiaotong-university-logo-1024px.png" alt="SWJTU Logo" class="logo-img">
-                            </td>
-                            <td class="institution-info">
-                                <h3><strong>Southwest Jiaotong University</strong></h3>
-                                <h4><strong>School of Computing and Artificial Intelligence</strong></h4>
-                                <p>Bachelor of Computer Science and Technology<br>
-                                    Sep. 2020 - Jun. 2024</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Work Experience -->
-            <section class="research">
-                <h2 class="section-title">Work Experience</h2>
-
-                <div class="research-item">
-                    <table class="institution-table work-table">
-                        <tr>
-                            <td class="institution-logo">
-                                <img src="./assets/images/logo-mi2.png" alt="Xiaomi Logo" class="logo-img">
-                            </td>
-                            <td class="institution-info">
-                                <h3><strong>Xiaomi Corp. (Wuhan)</strong></h3>
-                                <p><strong>Embedded Software Engineer, Home Appliances Software Team</strong><br>
-                                    <em>Product delivery, software upgrades, reliability testing, smart feature integration</em><br>
-                                    Jul. 2024 - Apr. 2025</p>
-                                <ul>
-                                    <li><strong>Overseas product delivery:</strong> Developed embedded software for Xiaomi's first overseas AC product line; completed major module updates across 7 core functions and resolved 40+ firmware/plugin issues through structured review cycles.</li>
-                                    <li><strong>Core product upgrades:</strong> Supported cross-platform software migration and module adaptation, fixed OTA stability and upgrade-timing issues, and delivered reliability test reports for key release changes.</li>
-                                    <li><strong>Smart feature development:</strong> Implemented communication and data conversion logic for new sensing-based control features in Pro models.</li>
-                                    <li><strong>Reliability validation:</strong> Led IO testing for multi-split systems (44 ports, 760 test records), identified 3 critical issues, and delivered comprehensive indoor/outdoor test reports.</li>
-                                    <li><strong>Award:</strong> Won <strong>Third Place</strong> in the 2024 Xiaomi Home Appliances Product Innovation Design Competition.</li>
-                                    <li><strong>Patent output:</strong> Independently filed two invention patents (<strong>CN120751358A</strong>, <strong>CN120466783A</strong>).</li>
-                                </ul>
-
-                                <!-- 横向滚动图片展示区域 -->
-                                <div class="scroll-gallery-wrapper">
-                                    <div>
-                                        <a href="./assets/images/work/QQ2026219-18271.gif" target="_blank" style="flex: 0 0 auto;">
-                                            <img src="./assets/images/work/QQ2026219-18271.gif" alt="Xiaomi Work Demo">
-                                        </a>
-                                        <a href="./assets/images/work/QQ2026219-183840.gif" target="_blank" style="flex: 0 0 auto;">
-                                            <img src="./assets/images/work/QQ2026219-183840.gif" alt="Xiaomi Work Demo">
-                                        </a>
-                                        <a href="./assets/images/work/PixPin_2026-02-19_18-43-06.png" target="_blank" style="flex: 0 0 auto;">
-                                            <img src="./assets/images/work/PixPin_2026-02-19_18-43-06.png" alt="Xiaomi Work Screenshot">
-                                        </a>
-                                        <a href="./assets/images/work/jijun.jpg" target="_blank" style="flex: 0 0 auto;">
-                                            <img src="./assets/images/work/jijun.jpg" alt="Xiaomi Work Image">
-                                        </a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Featured Projects -->
-            <section class="projects">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="work-achievements">
-                    <div class="achievements-grid">
-                        <!-- 1. VLA / 多模态机器人控制 -->
-                        <div class="achievement-item">
-                            <div class="achievement-media">
-                                <a href="./assets/project/vla/cover.gif" target="_blank" title="VLA Project Cover">
-                                    <img src="./assets/project/vla/cover.gif" alt="VLA Project Cover" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%233498db%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22%3EVLA%3C/text%3E%3C/svg%3E'">
-                                </a>
-                            </div>
-                            <div class="achievement-content">
-                                <div class="achievement-title">OpenVLA-OFT Reproduction for Bimanual Manipulation</div>
-                                <div class="achievement-description">
-                                    Reproduced an end-to-end robot control pipeline based on OpenVLA-OFT, including simulation data generation, RLDS conversion, distributed LoRA training, and evaluation. Built ~500 expert trajectories with domain randomization, trained a 7.5B model using 4×4090 + FSDP, and reached 83% success in simulation. Fixed the terminal-action truncation issue in data loading to remove end-stage action stagnation and keep success rate stable above 80%.
-                                </div>
-                                <div style="margin-top: 1rem;">
-                                    <a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning" class="achievement-link" target="_blank" rel="noreferrer">GitHub Repo</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 2. 智能汽车竞赛 -->
-                        <div class="achievement-item">
-                            <div class="achievement-media">
-                                <a href="https://www.bilibili.com/video/BV1eRfGBgEpp/?spm_id_from=333.1387.homepage.video_card.click" target="_blank" title="Demo Video" rel="noreferrer">
-                                    <img src="./assets/project/Intelligent_Vehicle/cover.jpg" alt="Intelligent Vehicle Demo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%233498db%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22%3E▶ Demo%3C/text%3E%3C/svg%3E'">
-                                </a>
-                            </div>
-                            <div class="achievement-content">
-                                <div class="achievement-title">18th National Intelligent Vehicle Competition (Baidu Creative Track)</div>
-                                <div class="achievement-description">
-                                    <strong>National 2nd Prize.</strong> Full-stack role: edge deployment, embedded comms, telemetry. Deployed YOLOv3-MobileNetV3 on embedded device; knowledge distillation + pruning boosted inference from 3 FPS to 30 FPS. Refactored UART with DMA + idle IRQ to fix packet sticking; CRC for reliability. Built Vue3+Flask telemetry platform for WiFi video streaming and PID hot-reload, cutting debug time by ~3x.
-                                </div>
-                                <div style="margin-top: 1rem;">
-                                    <a href="https://www.bilibili.com/video/BV1eRfGBgEpp/?spm_id_from=333.1387.homepage.video_card.click" class="achievement-link" target="_blank" rel="noreferrer">Watch Demo</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 3. 毕业设计 -->
-                        <div class="achievement-item">
-                            <div class="achievement-media">
-                                <a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf" target="_blank" title="Defense Slides">
-                                    <img src="./assets/project/Graduation_Project/cover.png" alt="Graduation Project" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%23e8eef4%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%233498db%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2212%22%3EThesis%3C/text%3E%3C/svg%3E'">
-                                </a>
-                            </div>
-                            <div class="achievement-content">
-                                <div class="achievement-title">Industry Knowledge Graph Graduation Project (Neo4j)</div>
-                                <div class="achievement-description">
-                                    Bachelor's thesis project based on <strong>Django + Neo4j</strong>, with a Vue3 visualization frontend and Python data processing scripts. The system supports industry-chain graph construction, relationship retrieval, and visual analysis.
-                                </div>
-                                <div style="margin-top: 1rem;">
-                                    <a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf" class="achievement-link" target="_blank">Defense Slides (PDF)</a>
-                                    <span style="margin: 0 0.5rem;">|</span>
-                                    <a href="https://www.bilibili.com/video/BV1bwfVBvEZx/?vd_source=15b30811ebad16d1dff1eb569e2cd9da" class="achievement-link" target="_blank" rel="noreferrer">Watch Demo</a>
-                                    <span style="margin: 0 0.5rem;">|</span>
-                                    <a href="https://github.com/tutuwai/industry-knowledge-graph-neo4j" class="achievement-link" target="_blank" rel="noreferrer">GitHub Repo</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 4. SRTP / 地铁浮置板清洁机器人 -->
-                        <div class="achievement-item">
-                            <div class="achievement-media">
-                                <a href="https://www.bilibili.com/video/BV1YRfGBgE7h/?spm_id_from=333.1387.homepage.video_card.click" target="_blank" title="Demo Video" rel="noreferrer">
-                                    <img src="./assets/project/Srtp/cover.jpg" alt="SRTP Demo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22100%22%3E%3Crect fill=%22%233498db%22 width=%22160%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22%3E▶ Demo%3C/text%3E%3C/svg%3E'">
-                                </a>
-                            </div>
-                            <div class="achievement-content">
-                                <div class="achievement-title">Metro Floating Slab Cleaning Robot (Campus Innovation Project)</div>
-                                <div class="achievement-description">
-                                    <strong>Role: Electrical Control Lead.</strong> Designed an ESP32-based main control PCB, integrating multi-channel motor drivers and a WiFi module. The system enables precise remote motion control in narrow subway floating-slab environments.
-                                </div>
-                                <div style="margin-top: 1rem;">
-                                    <a href="https://www.bilibili.com/video/BV1YRfGBgE7h/?spm_id_from=333.1387.homepage.video_card.click" class="achievement-link" target="_blank" rel="noreferrer">Watch Demo</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Awards & Honors（空） -->
-            <section class="awards">
-                <h2 class="section-title">Awards & Honors</h2>
-                <ul class="awards-list">
-                    <li><strong>2025/01</strong> - Xiaomi Home Appliances Product Innovation Competition, <strong>Third Place</strong></li>
-                    <li><strong>2023/08</strong> - 18th National Intelligent Vehicle Competition (Baidu Creative Track), <strong>National Second Prize</strong></li>
-                    <li><strong>2023/05</strong> - 14th China University Service Outsourcing Innovation Competition, <strong>National Third Prize</strong></li>
-                    <li><strong>2021</strong> - Southwest Jiaotong University, <strong>Comprehensive Scholarship (Third Class)</strong> & <strong>Excellent Student Cadre</strong></li>
-                </ul>
-            </section>
-
-            <!-- Last Update -->
-            <div class="last-update">
-                <p><em>Last updated: Feb 2026</em></p>
-                <p><a href="./Resume.pdf" target="_blank" rel="noreferrer">Download Resume (PDF)</a></p>
-                <p>© 2026 Haiwei Chen</p>
-            </div>
-        </div>
-    </main>
-
-    <div id="wechatModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center;" onclick="closeWechatModal()">
-        <div style="background:#fff; border-radius:10px; padding:12px; max-width:90vw; max-height:90vh;" onclick="event.stopPropagation()">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                <strong style="font-size:14px;">WeChat</strong>
-                <button onclick="closeWechatModal()" style="border:none; background:transparent; font-size:18px; cursor:pointer;">×</button>
-            </div>
-            <img src="./assets/images/wechat.jpg" alt="WeChat QR" style="max-width:80vw; max-height:75vh; display:block;">
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast"><div class="wrap mast-inner">
+  <a class="signature" href="#main">Haiwei Chen <span lang="zh-CN">陈海崴</span></a>
+  <nav aria-label="Portfolio"><a href="#projects">Projects</a><a href="#experience">Experience</a><a class="nav-cv" href="./Resume.pdf" lang="zh-CN">中文简历 <span aria-hidden="true">↗</span></a></nav>
+</div></header>
+<main id="main" class="wrap">
+  <section class="intro" aria-labelledby="name">
+    <div>
+      <p class="affiliation">Institute of Computing Technology · Chinese Academy of Sciences</p>
+      <h1 id="name">Haiwei Chen <span lang="zh-CN">陈海崴</span></h1>
+      <p class="lead">I train robot manipulation policies and test them on real arms.</p>
+      <p class="bio">I’m a first-year master’s student researching bimanual manipulation, vision–language–action policies and real-robot reinforcement learning. Before graduate school, I developed embedded firmware at Xiaomi.</p>
+      <div class="links intro-links"><a href="./Resume.pdf" lang="zh-CN">简历 PDF</a><a href="mailto:chenhaiwai@foxmail.com">Email</a><a href="https://github.com/tutuwai">GitHub</a><button id="show-wechat" type="button">WeChat</button></div>
     </div>
+    <img class="portrait" src="./assets/images/portrait.webp" width="270" height="338" alt="Haiwei Chen" fetchpriority="high">
+  </section>
 
-    <script>
-      function openWechatModal() {
-        var modal = document.getElementById('wechatModal');
-        modal.style.display = 'flex';
-      }
-      function closeWechatModal() {
-        var modal = document.getElementById('wechatModal');
-        modal.style.display = 'none';
-      }
-    </script>
+  <section id="projects" aria-labelledby="projects-title">
+    <h2 class="section-label" id="projects-title">Selected projects</h2>
+    <article class="feature" id="robosynchallenge">
+      <div class="feature-copy">
+        <p class="metadata">NeurIPS competition · 2026</p>
+        <h3>RoboSynChallenge</h3>
+        <p>I built the PiPER deployment and evaluation platform for all ten bimanual tasks. It connects three RGB cameras, 14-dimensional robot state and policy inference to the arms. Synchronized video and joint logs let us trace failures back to individual actions.</p>
+        <p>I led the pipette policy, using the learned policy for grasping and approach, then switching to tracking and alignment for the final press. Our entry ranked first on this task by overall score, with 84 successes in 100 official simulation trials.</p>
+        <div class="links"><a href="https://robosyn-bench.net/#/leaderboard">Team leaderboard</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">Pipette results</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">Team checkpoints</a></div>
+      </div>
+      <div class="feature-evidence">
+        <figure><img src="./assets/project/robosyn-table.webp" width="960" height="480" alt="Synchronized overhead and wrist camera views of the two PiPER arms arranging cutlery around a plate."><figcaption>Table rearrangement on our rig · overhead and two wrist cameras</figcaption></figure>
+        <dl class="stats"><div><dt>3<span> / 47</span></dt><dd>Team · simulation preliminaries</dd></div><div><dt>1<span>st</span></dt><dd>Pipette · task score</dd></div></dl>
+      </div>
+    </article>
+    <div class="project-pair">
+      <article class="project"><p class="metadata">Imitation learning · Personal project</p><h3>OpenVLA-OFT on RoboTwin</h3>
+      <p>I generated about 500 randomized expert demonstrations, converted them to RLDS and fine-tuned OpenVLA with LoRA and FSDP on four RTX 4090s. A 25-step action window was dropping the final 24 observation starts of long episodes. I restored those examples by padding targets with the last valid action.</p>
+      <div class="links"><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning">Code and training notes</a><a href="./assets/project/vla/cover.gif">Simulation demo</a></div></article>
+      <article class="project"><p class="metadata">Real-robot reinforcement learning</p><h3>HIL-SERL on PiPER</h3>
+      <p>I adapted the Franka-based setup for gear insertion on PiPER. I converted 19 demonstrations into 3,740 replay transitions and verified that the offline learner could load them. To address false successes while the gripper still held the gear, I combined the visual reward with gripper opening and a three-frame check on hardware.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-title">
+    <h2 id="exp-title" class="section-label">Experience &amp; education</h2>
+    <div class="timeline"><p class="metadata">Sep 2026 – present</p><div><h3>Institute of Computing Technology, CAS</h3><p>Master’s student · Advisor: Prof. Yunji Chen</p></div></div>
+    <div class="timeline"><p class="metadata">Jul 2024 – Apr 2025</p><div><h3>Xiaomi · Embedded Software Engineer</h3>
+      <p>Developed firmware for production air conditioners in Wuhan. Reworked seven core modules, resolved more than 40 firmware issues and designed a serial protocol for dual millimeter-wave radar sensing.</p>
+      <p>First inventor on a granted patent for scheduling firmware updates in idle windows (<strong>CN120466783B</strong>) and a published application for NFC-based control parameter updates (<strong>CN120751358A</strong>).</p>
+      <details><summary>Product development &amp; demos</summary><p>Supported the first overseas AC line. Validated 44 I/O ports against 760 records and traced three low-level defects. Placed third in Xiaomi’s home-appliance product innovation competition.</p><div class="links"><a href="./assets/images/work/QQ2026219-18271.gif">Product demo 1</a><a href="./assets/images/work/QQ2026219-183840.gif">Product demo 2</a><a href="./assets/images/work/PixPin_2026-02-19_18-43-06.png">Product screenshot</a><a href="./assets/images/work/jijun.jpg">Award</a></div></details>
+    </div></div>
+    <div class="timeline"><p class="metadata">Sep 2020 – Jun 2024</p><div><h3>Southwest Jiaotong University</h3><p>Bachelor’s degree · Computer Science and Technology</p></div></div>
+  </section>
+
+  <section class="earlier" aria-labelledby="earlier-title"><h2 id="earlier-title" class="section-label">Earlier work &amp; awards</h2>
+    <div class="timeline"><p class="metadata">Embedded vision</p><div><h3>National Intelligent Vehicle Competition</h3>
+    <p>National second prize, Baidu Creative Track. Used distillation and pruning to raise on-device inference from 3 to 30 FPS, and built vehicle telemetry for debugging steering and control.</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">Vehicle demo</a></div></div></div>
+    <details><summary>Other projects &amp; honors</summary>
+    <p><strong>Industry knowledge graph.</strong> Built a Django and Neo4j system for exploring industry relationships, with a Vue frontend.</p><div class="links"><a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf">Thesis slides</a><a href="https://github.com/tutuwai/industry-knowledge-graph-neo4j">Repository</a><a href="https://www.bilibili.com/video/BV1bwfVBvEZx/">Demo</a></div>
+    <p><strong>Metro cleaning robot.</strong> Led electrical control and designed an ESP32 board for remote motion control beneath floating slabs.</p><div class="links"><a href="https://www.bilibili.com/video/BV1YRfGBgE7h/">Robot demo</a></div>
+    <p>National third prize, China University Service Outsourcing Innovation Competition. SWJTU comprehensive scholarship and excellent student cadre award.</p></details>
+  </section>
+</main>
+<footer class="wrap"><span>Haiwei Chen · November 2026</span><a href="mailto:chenhaiwai@foxmail.com">chenhaiwai@foxmail.com</a></footer>
+<dialog id="wechat" aria-labelledby="wechat-title"><div class="dialog-head"><h2 id="wechat-title">WeChat</h2><button type="button" id="close-wechat">Close</button></div><img width="260" height="300" src="./assets/images/wechat.jpg" alt="Scan with WeChat to contact Haiwei Chen"></dialog>
+<script>
+  const wechat = document.getElementById('wechat');
+  document.getElementById('show-wechat').addEventListener('click', () => wechat.showModal());
+  document.getElementById('close-wechat').addEventListener('click', () => wechat.close());
+  wechat.addEventListener('click', event => { if (event.target === wechat) wechat.close(); });
+</script>
 </body>
-
 </html>
