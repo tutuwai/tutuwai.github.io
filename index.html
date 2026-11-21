@@ -64,7 +64,10 @@
     <article class="project" id="smart-car"><a class="art" href="https://www.bilibili.com/video/BV1eRfGBgEpp/"><img src="./assets/images/previews/car.webp" alt="Competition vehicle with its camera, electronics and wiring"></a>
       <div><p class="date">Baidu Creative Track · May – Aug 2023</p><h3>National Intelligent Vehicle Competition</h3><p><strong>National second prize.</strong> I deployed YOLOv3-MobileNetV3 on the car and used knowledge distillation and pruning to raise inference from 3 to 30 FPS. I implemented DMA-based UART reception, idle-line detection and CRC checking, and built Vue and Flask telemetry for Wi-Fi video and live PID tuning.</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">Watch the vehicle</a></div></div></article>
     <article class="project"><a class="art" href="./assets/project/vla/cover.gif"><img src="./assets/images/previews/openvla.webp" alt="RoboTwin simulation views from a bimanual manipulation episode"></a>
-      <div><p class="date">Independent project · 2026</p><h3>OpenVLA-OFT on RoboTwin</h3><p>I generated about 500 randomized expert trajectories, converted them to RLDS and fine-tuned a 7.5B-parameter policy for about 40,000 steps on four RTX 4090 GPUs using LoRA and FSDP. I fixed the 25-step action-window sampler so that training includes the last 24 observation starts of each long episode.</p><div class="links"><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning">Training code</a><a href="./assets/project/vla/cover.gif">Simulation demo</a></div></div></article>
+      <div><p class="date">Independent project · 2026</p><h3>OpenVLA-OFT on RoboTwin</h3>
+        <p>I trained a policy to pick up a hammer and strike a block at a randomized position. I generated about 500 expert trajectories, converted them to RLDS and fine-tuned a 7.5B-parameter model for about 40,000 steps on four RTX 4090 GPUs using LoRA and FSDP.</p>
+        <p>The arm sometimes repeated the same motion as it approached the block. While investigating those episodes, I found that the 25-step action-window sampler discarded the final 24 observation starts of each long trajectory. I kept those observations and filled the remaining action slots with the last recorded action.</p>
+        <div class="links"><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning">Training code</a><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning/blob/56dfd56edae0aa235b73158e913f3ba2792f05f7/assets/files/%E4%BC%98%E5%8C%96%E5%89%8D.gif">Before the fix</a><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning/blob/56dfd56edae0aa235b73158e913f3ba2792f05f7/assets/files/%E4%BC%98%E5%8C%96%E5%90%8E.gif">After the fix</a><a href="https://github.com/tutuwai/OpenVLA-RoboTwin-Finetuning/blob/56dfd56edae0aa235b73158e913f3ba2792f05f7/envs/beat_block_hammer.py#L82-L87">Success criterion</a></div></div></article>
     <article class="project"><a class="art" href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf"><img src="./assets/images/previews/graph.webp" loading="lazy" alt="Interactive industry knowledge graph interface"></a>
       <div><p class="date">Undergraduate thesis</p><h3>Industry knowledge graph</h3><p>I built a Django and Neo4j system for exploring industry-chain relationships, with Python data processing and an interactive Vue frontend.</p><div class="links"><a href="./assets/project/Graduation_Project/陈海崴-毕业设计答辩.pdf">Defense slides</a><a href="https://github.com/tutuwai/industry-knowledge-graph-neo4j">Code</a><a href="https://www.bilibili.com/video/BV1bwfVBvEZx/">Demo</a></div></div></article>
     <article class="project"><a class="art" href="https://www.bilibili.com/video/BV1YRfGBgE7h/"><img loading="lazy" src="./assets/images/previews/crawler.webp" alt="Tracked metro-cleaning robot prototype"></a>
@@ -101,14 +104,15 @@
 <script>
   const wechat = document.getElementById('wechat');
   const recordings = document.getElementById('recordings');
-  function showLinkedRecording() {
+  function openLinkedSection() {
     if (location.hash === '#recordings') recordings.open = true;
+    if (location.hash === '#competition-tasks') document.getElementById('competition-tasks').open = true;
   }
   document.querySelectorAll('a[href="#recordings"]').forEach(link =>
     link.addEventListener('click', () => { recordings.open = true; })
   );
-  window.addEventListener('hashchange', showLinkedRecording);
-  showLinkedRecording();
+  window.addEventListener('hashchange', openLinkedSection);
+  openLinkedSection();
   document.getElementById('show-wechat').addEventListener('click', () => wechat.showModal());
   document.getElementById('close-wechat').addEventListener('click', () => wechat.close());
   wechat.addEventListener('click', event => { if (event.target === wechat) wechat.close(); });
