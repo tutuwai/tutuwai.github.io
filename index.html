@@ -3,10 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f7f1">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Haiwei Chen · Robot learning">
+  <meta property="og:description" content="Bimanual manipulation, VLA training and real-robot experiments.">
+  <meta property="og:image" content="https://tutuwai.github.io/assets/project/robosyn-table.webp">
   <meta name="description" content="Haiwei Chen (陈海崴), MSc student at ICT, Chinese Academy of Sciences. Bimanual manipulation, VLA policy training and real-robot evaluation.">
   <title>Haiwei Chen 陈海崴 · Robot learning</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css?v=3">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -15,31 +18,32 @@
   <nav aria-label="Portfolio"><a href="#projects">Projects</a><a href="#experience">Experience</a><a class="nav-cv" href="./Resume.pdf" lang="zh-CN">中文简历 <span aria-hidden="true">↗</span></a></nav>
 </div></header>
 <main id="main" class="wrap">
-  <section class="intro" aria-labelledby="name">
-    <div>
-      <p class="affiliation">Institute of Computing Technology · Chinese Academy of Sciences</p>
-      <h1 id="name">Haiwei Chen <span lang="zh-CN">陈海崴</span></h1>
-      <p class="lead">I train robot manipulation policies and test them on real arms.</p>
-      <p class="bio">I’m a first-year master’s student researching bimanual manipulation, vision–language–action policies and real-robot reinforcement learning. Before graduate school, I developed embedded firmware at Xiaomi.</p>
-      <div class="links intro-links"><a href="./Resume.pdf" lang="zh-CN">简历 PDF</a><a href="mailto:chenhaiwai@foxmail.com">Email</a><a href="https://github.com/tutuwai">GitHub</a><button id="show-wechat" type="button">WeChat</button></div>
-    </div>
-    <img class="portrait" src="./assets/images/portrait.webp" width="270" height="338" alt="Haiwei Chen" fetchpriority="high">
-  </section>
-
+  <aside class="intro" aria-labelledby="name">
+    <img class="portrait" src="./assets/images/portrait.webp" width="115" height="144" alt="Haiwei Chen">
+    <h1 id="name">Haiwei Chen <span lang="zh-CN">陈海崴</span></h1>
+    <p class="profile-role">MSc student in robot learning</p>
+    <p class="affiliation">Institute of Computing Technology,<br> Chinese Academy of Sciences</p>
+    <p class="bio">I train manipulation policies and build the systems that let me test them on real arms. Previously, I developed embedded firmware at Xiaomi.</p>
+    <div class="links intro-links"><a class="button" href="./Resume.pdf" lang="zh-CN">中文简历 ↗</a><a href="https://github.com/tutuwai">GitHub</a><a href="mailto:chenhaiwai@foxmail.com">Email</a><button id="show-wechat" type="button">WeChat</button></div>
+  </aside>
+  <div class="work-column">
   <section id="projects" aria-labelledby="projects-title">
-    <h2 class="section-label" id="projects-title">Selected projects</h2>
+    <h2 class="section-label" id="projects-title">Selected work</h2>
     <article class="feature" id="robosynchallenge">
-      <div class="feature-copy">
-        <p class="metadata">NeurIPS competition · 2026</p>
-        <h3>RoboSynChallenge</h3>
-        <p>I built the PiPER deployment and evaluation platform for all ten bimanual tasks. It connects three RGB cameras, 14-dimensional robot state and policy inference to the arms. Synchronized video and joint logs let us trace failures back to individual actions.</p>
-        <p>I led the pipette policy, using the learned policy for grasping and approach, then switching to tracking and alignment for the final press. Our entry ranked first on this task by overall score, with 84 successes in 100 official simulation trials.</p>
-        <div class="links"><a href="https://robosyn-bench.net/#/leaderboard">Team leaderboard</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">Pipette results</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">Team checkpoints</a></div>
-      </div>
-      <div class="feature-evidence">
-        <figure><img src="./assets/project/robosyn-table.webp" width="960" height="480" alt="Synchronized overhead and wrist camera views of the two PiPER arms arranging cutlery around a plate."><figcaption>Table rearrangement on our rig · overhead and two wrist cameras</figcaption></figure>
-        <dl class="stats"><div><dt>3<span> / 47</span></dt><dd>Team · simulation preliminaries</dd></div><div><dt>1<span>st</span></dt><dd>Pipette · task score</dd></div></dl>
-      </div>
+      <p class="metadata">Bimanual manipulation <span> / </span> NeurIPS competition 2026</p>
+      <h3>RoboSynChallenge</h3>
+      <p class="feature-intro">One PiPER platform for ten manipulation tasks. I built the deployment stack and led the pipette policy.</p>
+      <figure class="viewer">
+        <div class="viewer-stage"><img id="still" src="./assets/project/robosyn-table.webp" width="960" height="480" alt="Overhead and wrist views of two arms arranging cutlery around a plate."><canvas id="sequence" width="768" height="384" hidden role="img" aria-label="Selected frame from a real PiPER evaluation, shown from three cameras."></canvas></div>
+        <div class="viewer-controls" id="controls" hidden>
+          <div class="tasks" role="group" aria-label="Choose a real-robot task"><button type="button" data-task="table" aria-pressed="true">Table setting</button><button type="button" data-task="basket" aria-pressed="false">Basket</button><button type="button" data-task="bell" aria-pressed="false">Bell</button></div>
+          <div class="scrub"><label for="frame">Frame</label><input id="frame" type="range" min="0" max="11" value="8" step="1"><output id="frame-time" for="frame">28.1 s</output></div>
+        </div>
+        <figcaption>Real-robot evaluation · overhead camera and two wrist cameras</figcaption>
+      </figure>
+      <div class="result-row"><strong>3<small> / 47</small></strong><span>Team rank<br>simulation preliminaries</span><strong>1<small>st</small></strong><span>Pipette task<br>overall score</span></div>
+      <p>For pipette manipulation, I used the learned policy for grasping and approach, then switched to tracking and alignment for the final press. The policy succeeded in 84 of 100 official simulation trials. On the real rig, synchronized video, policy commands and joint feedback let us pinpoint execution failures.</p>
+      <div class="links"><a href="https://robosyn-bench.net/#/leaderboard">Team leaderboard ↗</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">Pipette results ↗</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">Checkpoints ↗</a></div>
     </article>
     <div class="project-pair">
       <article class="project"><p class="metadata">Imitation learning · Personal project</p><h3>OpenVLA-OFT on RoboTwin</h3>
@@ -70,9 +74,11 @@
     <p><strong>Metro cleaning robot.</strong> Led electrical control and designed an ESP32 board for remote motion control beneath floating slabs.</p><div class="links"><a href="https://www.bilibili.com/video/BV1YRfGBgE7h/">Robot demo</a></div>
     <p>National third prize, China University Service Outsourcing Innovation Competition. SWJTU comprehensive scholarship and excellent student cadre award.</p></details>
   </section>
+  </div>
 </main>
 <footer class="wrap"><span>Haiwei Chen · November 2026</span><a href="mailto:chenhaiwai@foxmail.com">chenhaiwai@foxmail.com</a></footer>
 <dialog id="wechat" aria-labelledby="wechat-title"><div class="dialog-head"><h2 id="wechat-title">WeChat</h2><button type="button" id="close-wechat">Close</button></div><img width="260" height="300" src="./assets/images/wechat.jpg" alt="Scan with WeChat to contact Haiwei Chen"></dialog>
+<script src="./assets/sequence.js" defer></script>
 <script>
   const wechat = document.getElementById('wechat');
   document.getElementById('show-wechat').addEventListener('click', () => wechat.showModal());
