@@ -45,7 +45,7 @@
     <article class="project" id="robosynchallenge">
       <a href="#recordings" class="art"><img src="./assets/project/robosyn-table.webp" alt="Overhead and wrist views of PiPER arranging cutlery"></a>
       <div><p class="date">NeurIPS competition · Aug – Nov 2026</p><h3>RoboSynChallenge · Ten-task bimanual manipulation</h3>
-      <p>I built the PiPER deployment and evaluation system for all ten tasks, synchronizing three RGB views, 14-dimensional robot state and CAN commands. I generated 1,000 simulation demonstrations for table rearrangement and tuned how many actions the arms executed before replanning.</p>
+      <p>I built the PiPER deployment and evaluation system for all ten tasks, synchronizing three RGB views, 14-dimensional robot state and CAN commands. I generated 1,000 simulation demonstrations for table rearrangement and tuned the number of actions sent to the arms from each predicted chunk.</p>
       <p>On November 10, we tested bell ringing on hardware using π0.5 with a left-arm press-depth correction. An operator scored <strong>20/20 successful trials</strong>, one at each position on a 4 × 5 grid. <a href="./assets/project/bell-2026-11-10.csv" download>Download the 20 trial records (CSV)</a></p>
 <p>Our team fine-tuned π0.5 on a 77:23 mix of simulated and real demonstrations, with a second real-data stage on selected tasks. We placed <strong>3rd of 47 teams in the simulation preliminaries</strong>. The pipette task I led ranked first by overall score in those simulation preliminaries.</p>
       <details id="team-report"><summary>Team technical report · Synthetic data coverage and two-stage adaptation of π0.5</summary>
@@ -129,7 +129,7 @@
 </main>
 <footer class="container"><span>Haiwei Chen · November 2026</span><a href="mailto:chenhaiwai@foxmail.com">chenhaiwai@foxmail.com</a></footer>
 <dialog id="wechat" aria-labelledby="wechat-title"><div class="dialog-head"><h2 id="wechat-title">WeChat</h2><button type="button" id="close-wechat">Close</button></div><img width="260" height="300" src="./assets/images/wechat.jpg" alt="Scan with WeChat to contact Haiwei Chen"></dialog>
-<script src="./assets/sequence.js?v=3" defer></script>
+<script src="./assets/sequence.js?v=4" defer></script>
 <script src="./assets/profile.js?v=3" defer></script>
 
 </body></html>

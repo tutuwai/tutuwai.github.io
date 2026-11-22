@@ -52,8 +52,8 @@ async function selectTask(id, updateUrl) {
   loadedImage = img;
   const {prefix, success} = tasks[id];
   result.textContent = isChinese
-    ? "本回合由操作员判为" + (success ? "成功" : "失败") + "。π0.5 每次预测 50 步，执行前 " + prefix + " 步后重新规划。"
-    : "Operator marked this run as " + (success ? "successful" : "unsuccessful") + ". π0.5 predicted 50 actions and executed " + prefix + " before replanning.";
+    ? "本回合由操作员判为" + (success ? "成功" : "失败") + "。π0.5 每个动作块预测 50 步，本场配置为执行前 " + prefix + " 步。"
+    : "Operator marked this run as " + (success ? "successful" : "unsuccessful") + ". π0.5 predicted 50 actions per chunk. This run was configured to execute the first " + prefix + ".";
   draw();
   canvas.hidden = false;
   still.hidden = true;
