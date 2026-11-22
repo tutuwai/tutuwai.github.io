@@ -17,6 +17,11 @@ document.getElementById('close-wechat').addEventListener('click', () => wechat.c
 wechat.addEventListener('click', event => { if (event.target === wechat) wechat.close(); });
 const languageLink = document.querySelector(".language");
 function syncLanguageLink() {
+  const alternate = new URL(languageLink.href);
+  const task = new URLSearchParams(location.search).get("task");
+  if (task && location.hash === "#recordings") alternate.searchParams.set("task", task);
+  else alternate.searchParams.delete("task");
+  languageLink.href = alternate.href;
   languageLink.hash = window.location.hash;
 }
 window.addEventListener("hashchange", syncLanguageLink);

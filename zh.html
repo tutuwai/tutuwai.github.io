@@ -10,7 +10,7 @@
 <meta content="https://tutuwai.github.io/assets/project/robosyn-table.webp" property="og:image"/>
 <link href="https://tutuwai.github.io/zh.html" hreflang="zh-CN" rel="alternate"/>
 <link href="https://tutuwai.github.io/" hreflang="en" rel="alternate"/>
-<link href="./assets/css/style.css?v=profile6" rel="stylesheet"/>
+<link href="./assets/css/style.css?v=profile7" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" href="#main">跳到正文</a>
@@ -55,20 +55,45 @@
 <figure class="viewer"><a href="./assets/project/mixer-layouts.webp"><img loading="lazy" width="1908" height="1007" style="width:100%;height:auto" src="./assets/project/mixer-layouts.webp" alt="两张单物体位置表均保留全部 25 格；按烧杯和搅拌器位置交叉统计，309 个组合中有 38 个在筛选后消失。"/></a><figcaption>同一批示范的两种统计方式。这里统计仿真初始摆位，策略在对应真机摆位上的成功率仍待评测。</figcaption></figure></details>
 <details id="competition-tasks"><summary>查看双臂平台支持的十项任务</summary>
 <ul>
-<li>按铃</li>
-<li>桌面整理</li>
-<li>倒水</li>
-<li>装盒提篮</li>
-<li>物件交接入筒</li>
-<li>开抽屉放物</li>
-<li>操作搅拌器</li>
-<li>双臂装配</li>
-<li>操作移液器</li>
-<li>样品插架</li>
+<li><a href="?task=bell#recordings">按铃</a></li>
+<li><a href="?task=table#recordings">桌面整理</a></li>
+<li><a href="?task=pour#recordings">倒水</a></li>
+<li><a href="?task=basket#recordings">装奶盒并提篮</a></li>
+<li><a href="?task=handover#recordings">交接笔入筒</a></li>
+<li><a href="?task=drawer#recordings">开抽屉放番茄</a></li>
+<li><a href="?task=mixer#recordings">操作搅拌器</a></li>
+<li><a href="?task=assembly#recordings">离心管对接</a></li>
+<li><a href="?task=pipette#recordings">操作移液器</a></li>
+<li><a href="?task=loading#recordings">试管入架</a></li>
 </ul>
 </details>
 <div class="links"><a href="#demo">46 秒真机演示</a><a href="#recordings">逐帧回放</a><a href="https://robosyn-bench.net/#/leaderboard">团队排名</a><a href="https://robosyn-bench.net/#/leaderboard/manipulate_pipette">移液器单项成绩</a><a href="https://huggingface.co/asiazyh/IAII-IICS-RoboSynChallenge-Final-Round-CKPT">团队模型权重</a></div></div>
 </article>
+<details id="demo"><summary>播放 46 秒真机演示</summary>
+<figure class="viewer"><video aria-label="陈海崴的双臂操作项目演示" controls playsinline preload="none" width="1280" height="720" poster="./assets/project/robosyn-demo-poster.webp">
+<source src="./assets/project/robosyn-demo.mp4" type="video/mp4"/>
+<track kind="subtitles" srclang="en" label="English" src="./assets/project/robosyn-demo.en.vtt"/>
+</video><figcaption>桌面整理、装盒提篮、按铃与一次餐叉滑落的日志复盘。<a download href="./assets/project/robosyn-demo.mp4">下载 MP4（6.4 MB）</a></figcaption></figure></details>
+<details id="recordings"><summary>查看十项真机任务的逐帧回放</summary>
+<figure class="viewer">
+<div class="viewer-stage"><img alt="双臂围绕盘子整理餐具的顶视与腕部画面" height="480" id="still" src="./assets/project/robosyn-table.webp" width="960"/><canvas aria-label="PiPER 真机评测的三机位同步画面" height="384" hidden="" id="sequence" role="img" width="768"></canvas></div>
+<div class="viewer-controls" hidden="" id="controls">
+<label class="replay-task" for="replay-task">选择任务 <select id="replay-task">
+            <option value="bell">按铃</option>
+            <option value="table" selected>桌面整理</option>
+            <option value="pour">倒水</option>
+            <option value="basket">装奶盒并提篮</option>
+            <option value="handover">交接笔入筒</option>
+            <option value="drawer">开抽屉放番茄</option>
+            <option value="mixer">操作搅拌器</option>
+            <option value="assembly">离心管对接</option>
+            <option value="pipette">操作移液器</option>
+            <option value="loading">试管入架</option>
+          </select></label>
+<div class="scrub"><label for="frame">回放帧</label><input id="frame" max="11" min="0" step="1" type="range" value="8"/><output for="frame" id="frame-time">28.1 s</output></div>
+</div>
+<figcaption>顶视与双腕相机同步录像，每项选取一个回合。<span id="run-result" aria-live="polite"></span></figcaption>
+</figure></details>
 <article class="project" id="smart-car"><a class="art" href="https://www.bilibili.com/video/BV1eRfGBgEpp/"><img alt="智能汽车赛赛车的相机与电路" src="./assets/images/previews/car.webp"/></a>
 <div><p class="date">百度创意组 · 2023.05 – 2023.08</p><h3>第十八届全国大学生智能汽车竞赛</h3><p>获<strong>全国二等奖</strong>。我负责车端识别数据采集与模型部署。团队以知识蒸馏和剪枝优化 YOLOv3-MobileNetV3，推理从 3 FPS 提至 30 FPS。</p><p>高频发送控制指令时，车端偶发丢指令或解析错误。我调整串口收发协议，用 DMA 中断收发数据，并编写 Vue3 调参界面。界面经队友实现的 Flask 中转服务连接 STM32，支持看着实时图传调节 PID 参数。</p><div class="links"><a href="https://www.bilibili.com/video/BV1eRfGBgEpp/">赛车演示</a></div></div></article>
 <article class="project"><a class="art" href="./assets/project/vla/cover.gif"><img alt="RoboTwin 双臂操作仿真画面" src="./assets/images/previews/openvla.webp"/></a>
@@ -81,20 +106,7 @@
 <article class="project"><a class="art" href="https://www.bilibili.com/video/BV1YRfGBgE7h/"><img alt="履带式清洁机器人样机" loading="lazy" src="./assets/images/previews/crawler.webp"/></a>
 <div><p class="date">大学生创新项目</p><h3>地铁浮置板清洁机器人</h3><p>担任电控负责人，设计集成电机驱动与 Wi-Fi 通信的 ESP32 主控板，实现地铁浮置板下清洁机器人样机的远程行走控制。</p><div class="links"><a href="https://www.bilibili.com/video/BV1YRfGBgE7h/">样机演示</a></div></div></article>
 <article class="hil-note"><h3>HIL-SERL · PiPER 齿轮插入适配</h3><p>将 Franka 齿轮插入基线适配到 PiPER。采集 19 条示范，转换为 3,740 条状态转移，验证回放采样和 JAX 学习器离线加载。为减少夹爪仍托住齿轮时的误判，在真机上验证了视觉奖励、夹爪开度与连续三帧联合判定。</p></article>
-<details id="demo"><summary>播放 46 秒真机演示</summary>
-<figure class="viewer"><video aria-label="陈海崴的双臂操作项目演示" controls playsinline preload="none" width="1280" height="720" poster="./assets/project/robosyn-demo-poster.webp">
-<source src="./assets/project/robosyn-demo.mp4" type="video/mp4"/>
-<track kind="subtitles" srclang="en" label="English" src="./assets/project/robosyn-demo.en.vtt"/>
-</video><figcaption>桌面整理、装盒提篮、按铃与一次餐叉滑落的日志复盘。<a download href="./assets/project/robosyn-demo.mp4">下载 MP4（6.4 MB）</a></figcaption></figure></details>
-<details id="recordings"><summary>查看三项任务的逐帧回放</summary>
-<figure class="viewer">
-<div class="viewer-stage"><img alt="双臂围绕盘子整理餐具的顶视与腕部画面" height="480" id="still" src="./assets/project/robosyn-table.webp" width="960"/><canvas aria-label="PiPER 真机评测的三机位同步画面" height="384" hidden="" id="sequence" role="img" width="768"></canvas></div>
-<div class="viewer-controls" hidden="" id="controls">
-<div aria-label="选择回放任务" class="tasks" role="group"><button aria-pressed="true" data-task="table" type="button">桌面整理</button><button aria-pressed="false" data-task="basket" type="button">装盒提篮</button><button aria-pressed="false" data-task="bell" type="button">按铃</button></div>
-<div class="scrub"><label for="frame">回放帧</label><input id="frame" max="11" min="0" step="1" type="range" value="8"/><output for="frame" id="frame-time">28.1 s</output></div>
-</div>
-<figcaption>真机评测录像 · 一路顶视、两路腕部视角</figcaption>
-</figure></details>
+
 </section>
 <section id="patents"><h2>发明专利</h2><dl class="records">
 <dt><a href="https://eureka.patsnap.com/patent/CN120466783B">CN120466783B</a></dt><dd><strong>第一发明人 · 2026.09.11 授权公告。</strong>空调静默 OTA 升级。根据历史运行与环境数据预测空闲时段，再根据控制指令动态调整升级窗口。</dd>
@@ -113,6 +125,6 @@
 </main>
 <footer class="container"><span>陈海崴 · 2026 年 11 月</span><a href="mailto:chenhaiwai@foxmail.com">chenhaiwai@foxmail.com</a></footer>
 <dialog aria-labelledby="wechat-title" id="wechat"><div class="dialog-head"><h2 id="wechat-title">微信</h2><button id="close-wechat" type="button">关闭</button></div><img alt="用微信扫码联系陈海崴" height="300" src="./assets/images/wechat.jpg" width="260"/></dialog>
-<script defer="" src="./assets/sequence.js?v=2"></script>
-<script defer="" src="./assets/profile.js?v=2"></script>
+<script defer="" src="./assets/sequence.js?v=3"></script>
+<script defer="" src="./assets/profile.js?v=3"></script>
 </body></html>

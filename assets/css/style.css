@@ -71,11 +71,11 @@ summary { font-weight:600; color:var(--accent); }
 .viewer video { display:block; width:100%; height:auto; background:#101f23; }
 .viewer-stage { aspect-ratio:2/1; background:#182433; }
 .viewer-stage img,.viewer-stage canvas { width:100%; display:block; height:auto; }
-.viewer-controls,.tasks,.scrub { display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
+.viewer-controls,.replay-task,.scrub { display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
 .viewer-controls { padding:8px 12px; color:#fff; background:#223347; justify-content:space-between; }
-.tasks button { border:1px solid transparent; border-radius:4px; font-size:.8rem; background:transparent; color:white; padding:4px 8px; }
-.tasks button[aria-pressed=true] { color:var(--ink); background:white; }
-.tasks button:hover { border-color:#bdd5e7; }
+.replay-task { font-size:.875rem; max-width:100%; }
+.replay-task select { max-width:100%; padding:.3rem .45rem; background:#fff; color:var(--ink); border:1px solid #c5d2da; border-radius:4px; font:inherit; }
+#run-result { display:block; color:var(--ink); }
 .scrub { font-size:.78rem; }.scrub input { width:clamp(70px,13vw,150px); accent-color:#a0d8ff; }.scrub output { min-width:44px; font-variant-numeric:tabular-nums; }
 figcaption { margin-top:4px; }
 .records { display:grid; grid-template-columns:minmax(100px,145px) 1fr; gap:9px 20px; font-size:.94rem; }
